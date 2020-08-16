@@ -1,0 +1,918 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SourceFile Checksum="1A851246282FC3FDC7FA5CE69A3E6B823366379090DFFCA98121A9D1980CFA521B8D51050D7E9A04AC1D992A3EC5BB28923C0A8C35B14FD76BA0A6237815B659" Timestamp="1D674257158D375" xmlns="http://www.ni.com/PlatformFramework">
+	<SourceModelFeatureSet>
+		<ParsableNamespace AssemblyFileVersion="8.2.0.50169" FeatureSetName="FlexLogger DAQmx" Name="http://www.ni.com/FlexLogger/DAQmx" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="8.2.0.50169" FeatureSetName="Lumberjack Core" Name="http://www.ni.com/Lumberjack.Core" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="8.2.0.50169" FeatureSetName="Editor" Name="http://www.ni.com/PlatformFramework" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ApplicationVersionInfo Build="8.2.0.50169" Name="FlexLogger" Version="20.2.0.0" />
+	</SourceModelFeatureSet>
+	<ChannelSpecification xmlns="http://www.ni.com/Lumberjack.Core">
+		<ChannelConfigurationModel Id="3a6163c06834136a5d5c75e8e8fc865">
+			<ProcessingElementModelOwner Id="831b92a24c06470da3bae3bfdf627d5b">
+				<DAQmxProcessingElement Id="dc3adb12603a418fb78afe50bfb04b24" xmlns="http://www.ni.com/FlexLogger/DAQmx">
+					<DAQmxChassisModelProxy DeviceName="[string]cDAQ1" Id="1fafea89e3aa41f89ec177abd44829c6" SerialNumber="[string]">
+						<UnidirectionalDAQmxModuleModel Chassis="[string]cDAQ1" ChassisSerialNumber="[string]" DeviceLabel="[string]CSeriesVoltageInputModule" DeviceName="[string]cDAQ1Mod1" DeviceType="[DeviceType]CompactDaq" IconPath="[string]pack://application:,,,/NationalInstruments.DAQmx.SystemDesigner.Plugin;component/NineGridImages/PartsView_Voltage_24x24.xml" Id="1b2b537d41dd4f3a8b935fdee428ffb4" IsSimulated="[bool]True" ProductIdentifier="[ulong]29381" ProductName="[string]NI 9201" SampleRateLevel="[SampleRateLevel]Medium" SerialNumber="[string]" Slot="[ulong]1" SmallIconPath="[string]pack://application:,,,/NationalInstruments.DAQmx.SystemDesigner.Plugin;component/NineGridImages/TableView_Voltage_16x16.xml" StyleProviderId="[string]CdaqModuleDisplayStrategyProvider">
+							<InputChannelAdapter Id="72da01506beb41e7adf8d11e6ea9b2ca">
+								<AnalogInputChannel Alias="cDAQ1Mod1/ai0" CriticalAlarm="699050c9444487896d012de6ded46e7" DataType="[Type]Wfm(Double)" ExpectedMaximum="[double]10" ExpectedMinimum="[double]-10" Id="4ed1592a979c43d8a23dd43d9793c9ec" LastTedsScanTimestamp="[DateTime]0001-01-01T06:00:00.0000000Z" PhysicalMeasurement="[PhysicalMeasurement]Temperature" SampleRate="[double]100" SensorClass="[SensorClass]Voltage" Source="cDAQ1Mod1/ai0" Units="[string]°C" WarningAlarm="bf870bea687d48808e65f0ca552f78d9">
+									<DAQmxVoltageInput ElectricalUnits="[Unit]Volts" Filter="[Filter]None" Id="33faeb7ce5a547839726564e90a33214" TerminalConfiguration="[TerminalConfiguration]Rse" />
+									<VoltageSensor Coupling="[Coupling]DC" ElectricalMaximum="[double]10" ElectricalMinimum="[double]-10" Id="b901a64719f640de9ffc97774ca5db0f" PhysicalMaximum="[double]10" PhysicalMinimum="[double]-10" ScaleType="[ScaleType]Linear">
+										<StandardUnitModel Id="6f31342d74594b9aacb770178b4c28c2" Units="[Unit]DegreesCelsius" />
+										<LinearScaleModel Id="14d29d7f7a9d44c39c123d509e06cee5">
+											<SlopeScalePropertyModel Id="9145e18c64ae4ad4ab61bd18c58cea7b" SlopeUnit="[string]°C/V" />
+											<ZeroedYInterceptPropertyModel Id="5df463e96de1426b8000dff3707ea428" />
+										</LinearScaleModel>
+									</VoltageSensor>
+									<AlarmModel Id="699050c9444487896d012de6ded46e7" Severity="[AlarmSeverity]Critical" TriggerModel="d0bb4b7dbdb445b8b9071cc79e094e93" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]a6744ed3-448b-46ff-b586-48369f6fa87f" AliasToMonitor="[string]cDAQ1Mod1/ai0" Id="d0bb4b7dbdb445b8b9071cc79e094e93">
+											<AboveValueTriggerModel Id="9c9daa7df1e04188b92a03fc5a822ecb" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+									<AlarmModel Id="bf870bea687d48808e65f0ca552f78d9" Severity="[AlarmSeverity]Warning" TriggerModel="b63847d7f02e49f9a35076b43061ef0c" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]6fb672a7-42f1-4611-95b6-e6490bf6c41b" AliasToMonitor="[string]cDAQ1Mod1/ai0" Id="b63847d7f02e49f9a35076b43061ef0c">
+											<AboveValueTriggerModel Id="8f7936a1bd4342bfb788460fb78924c6" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+								</AnalogInputChannel>
+								<UnscaledChannelOutputInfo Alias="cDAQ1Mod1/ai0_Unscaled" CriticalAlarm="1e94dcf5295d4d4794cf1ae705523f4e" DataType="[Type]Wfm(Double)" Id="4e63afeb06a147d59a7ef52c1a160c36" IsTag="[bool]True" SampleRate="[double]100" Source="cDAQ1Mod1/ai0" Units="[string]V" WarningAlarm="35bbe9229f37478fa2a589f0308fdff6">
+									<AlarmModel Id="1e94dcf5295d4d4794cf1ae705523f4e" Severity="[AlarmSeverity]Critical" TriggerModel="6e3a3cb66fcb4e01a530939e12983119" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]c0ca5d0c-b299-4d21-8a8e-49df305b51db" AliasToMonitor="[string]cDAQ1Mod1/ai0_Unscaled" Id="6e3a3cb66fcb4e01a530939e12983119">
+											<AboveValueTriggerModel Id="4afaf942f2864363885fcfac47a1c8c1" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+									<AlarmModel Id="35bbe9229f37478fa2a589f0308fdff6" Severity="[AlarmSeverity]Warning" TriggerModel="657108363e85478893566cd0d10fee17" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]49c5ce51-e4c4-472a-a1a8-e971887acb6a" AliasToMonitor="[string]cDAQ1Mod1/ai0_Unscaled" Id="657108363e85478893566cd0d10fee17">
+											<AboveValueTriggerModel Id="d802ad1030cd4984b08546e1831b32f1" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+								</UnscaledChannelOutputInfo>
+								<ResampledChannelOutputInfo Alias="cDAQ1Mod1/ai0_Resampled" CriticalAlarm="968885b75952470a9fe4a9c1042c9020" DataType="[Type]Wfm(Double)" Id="b26535785bef44d086b6ecececb3893c" SampleRate="[double]100" Source="cDAQ1Mod1/ai0" Units="[string]V" WarningAlarm="ce170afd821a47f3bcd4453bc4ae8688">
+									<AlarmModel Id="968885b75952470a9fe4a9c1042c9020" Severity="[AlarmSeverity]Critical" TriggerModel="8bd3b24c7806498c8dba5fc07538e826" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]e87c3d42-ed0a-4379-8a22-8980ffff365e" AliasToMonitor="[string]cDAQ1Mod1/ai0_Resampled" Id="8bd3b24c7806498c8dba5fc07538e826">
+											<AboveValueTriggerModel Id="1342b3f40fd74ec4870a6b7674662da0" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+									<AlarmModel Id="ce170afd821a47f3bcd4453bc4ae8688" Severity="[AlarmSeverity]Warning" TriggerModel="6804034575f74d0694de9e7f103916c4" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]f831979b-639b-4bd4-80d6-70efefe3218b" AliasToMonitor="[string]cDAQ1Mod1/ai0_Resampled" Id="6804034575f74d0694de9e7f103916c4">
+											<AboveValueTriggerModel Id="53f1ec7eba6d44f9906d2081e40b8437" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+								</ResampledChannelOutputInfo>
+							</InputChannelAdapter>
+							<InputChannelAdapter Id="76f165e1df9d4e01b1b6915e5ebd7da6">
+								<AnalogInputChannel Alias="cDAQ1Mod1/ai1" CriticalAlarm="4c3e039c7cbd4518bcf7ca1802219b88" DataType="[Type]Wfm(Double)" Disabled="[bool]False" ExpectedMaximum="[double]10" ExpectedMinimum="[double]-10" Id="6516c022839a4267a116d5fcdd9d27d4" LastTedsScanTimestamp="[DateTime]0001-01-01T06:00:00.0000000Z" PhysicalMeasurement="[PhysicalMeasurement]Temperature" SampleRate="[double]100" SensorClass="[SensorClass]Voltage" Source="cDAQ1Mod1/ai1" Units="[string]°C" WarningAlarm="520e22abcfd347f484f6e571193f28b3">
+									<VoltageSensor Coupling="[Coupling]DC" ElectricalMaximum="[double]10" ElectricalMinimum="[double]-10" Id="83c4f30b29cf4ccba511a32ade9b2276" PhysicalMaximum="[double]10" PhysicalMinimum="[double]-10" ScaleType="[ScaleType]Linear">
+										<StandardUnitModel Id="665e98daf3437bbd2936bd567eaba9" Units="[Unit]DegreesCelsius" />
+										<LinearScaleModel Id="2844ee4f19b945f4810193631b9ebae8">
+											<SlopeScalePropertyModel Id="654e932dd491435bbebdcd528dfd8166" SlopeUnit="[string]°C/V" />
+											<ZeroedYInterceptPropertyModel Id="3119f1aa14345269c7156736becf458" />
+										</LinearScaleModel>
+									</VoltageSensor>
+									<DAQmxVoltageInput ElectricalUnits="[Unit]Volts" Filter="[Filter]None" Id="dbf854c80493468595ff477734b63673" TerminalConfiguration="[TerminalConfiguration]Rse" />
+									<AlarmModel Id="520e22abcfd347f484f6e571193f28b3" Severity="[AlarmSeverity]Warning" TriggerModel="2bca42bb9d24b1d904cc10b3a434d0b" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]6fb672a7-42f1-4611-95b6-e6490bf6c41b" AliasToMonitor="[string]cDAQ1Mod1/ai1" Id="2bca42bb9d24b1d904cc10b3a434d0b">
+											<AboveValueTriggerModel Id="5f51b9325c7c4aee9426851dc0e4c0e7" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+									<AlarmModel Id="4c3e039c7cbd4518bcf7ca1802219b88" Severity="[AlarmSeverity]Critical" TriggerModel="8c33db0e0dec4b7fac06983666503e46" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]a6744ed3-448b-46ff-b586-48369f6fa87f" AliasToMonitor="[string]cDAQ1Mod1/ai1" Id="8c33db0e0dec4b7fac06983666503e46">
+											<AboveValueTriggerModel Id="da3596fc308a48f585ab56174675d58a" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+								</AnalogInputChannel>
+								<UnscaledChannelOutputInfo Alias="cDAQ1Mod1/ai1_Unscaled" CriticalAlarm="d4af9ba7993b43b7b6c9e88532c418c6" DataType="[Type]Wfm(Double)" Disabled="[bool]False" Id="1c031f7557534a6c9d97dc7b838d4483" IsTag="[bool]True" SampleRate="[double]100" Source="cDAQ1Mod1/ai1" Units="[string]V" WarningAlarm="4bb8671a18284318b8f193ded68f3702">
+									<AlarmModel Id="d4af9ba7993b43b7b6c9e88532c418c6" Severity="[AlarmSeverity]Critical" TriggerModel="925da892c4134a5dbef5e58e646680bf" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]eb43e0fb-d41f-433a-add5-0792703cf5fa" AliasToMonitor="[string]cDAQ1Mod1/ai1_Unscaled" Id="925da892c4134a5dbef5e58e646680bf">
+											<AboveValueTriggerModel Id="6bb1afef8bd84b6cbd97bd173e1338a0" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+									<AlarmModel Id="4bb8671a18284318b8f193ded68f3702" Severity="[AlarmSeverity]Warning" TriggerModel="761610373bd14a9184a8db61fb057960" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]e670b915-c6f9-4ddc-b205-dc978e550d6e" AliasToMonitor="[string]cDAQ1Mod1/ai1_Unscaled" Id="761610373bd14a9184a8db61fb057960">
+											<AboveValueTriggerModel Id="97772477bae044de81e1fab0946cd6cb" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+								</UnscaledChannelOutputInfo>
+								<ResampledChannelOutputInfo Alias="cDAQ1Mod1/ai1_Resampled" CriticalAlarm="56630a98d4984433b1e324611c5f011f" DataType="[Type]Wfm(Double)" Disabled="[bool]False" Id="9fa681ddd458493192dc5fb7132a401f" SampleRate="[double]100" Source="cDAQ1Mod1/ai1" Units="[string]V" WarningAlarm="4cf185560dc48fe8f927ac521d7cc51">
+									<AlarmModel Id="56630a98d4984433b1e324611c5f011f" Severity="[AlarmSeverity]Critical" TriggerModel="e1608f5ef6df4ed68b7ba97859efd50e" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]6b7526dc-7774-449a-a774-d6bbc8139fe6" AliasToMonitor="[string]cDAQ1Mod1/ai1_Resampled" Id="e1608f5ef6df4ed68b7ba97859efd50e">
+											<AboveValueTriggerModel Id="23a208853a1a4150b25b033abed1758e" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+									<AlarmModel Id="4cf185560dc48fe8f927ac521d7cc51" Severity="[AlarmSeverity]Warning" TriggerModel="8ed30db94f414ff5becee9941a0308fb" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]f74ce493-676c-43df-ac75-877a11b68ee5" AliasToMonitor="[string]cDAQ1Mod1/ai1_Resampled" Id="8ed30db94f414ff5becee9941a0308fb">
+											<AboveValueTriggerModel Id="4b88b748222f485a93d282ef3d447032" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+								</ResampledChannelOutputInfo>
+							</InputChannelAdapter>
+							<InputChannelAdapter Id="23d29daa9c974da19a6b695b1f25d109">
+								<AnalogInputChannel Alias="cDAQ1Mod1/ai2" CriticalAlarm="700ddf52c9f645cab1af601afd533ffc" DataType="[Type]Wfm(Double)" Disabled="[bool]False" ExpectedMaximum="[double]10" ExpectedMinimum="[double]-10" Id="5695ac4f89894619bf382241e15f2b46" LastTedsScanTimestamp="[DateTime]0001-01-01T06:00:00.0000000Z" PhysicalMeasurement="[PhysicalMeasurement]Temperature" SampleRate="[double]100" SensorClass="[SensorClass]Voltage" Source="cDAQ1Mod1/ai2" Units="[string]°C" WarningAlarm="c11c763fd89c4536b1bbe95bfaa9ab7b">
+									<VoltageSensor Coupling="[Coupling]DC" ElectricalMaximum="[double]10" ElectricalMinimum="[double]-10" Id="d272a0f1de2d413ab8645c9f7554ce4c" PhysicalMaximum="[double]10" PhysicalMinimum="[double]-10" ScaleType="[ScaleType]Linear">
+										<StandardUnitModel Id="140e9ecb54594c1c9c897a537e745a72" Units="[Unit]DegreesCelsius" />
+										<LinearScaleModel Id="c15e84bf92a34f29b4cd9b50cbebf394">
+											<SlopeScalePropertyModel Id="3a081d17e605495eb1980d0350fd8599" SlopeUnit="[string]°C/V" />
+											<ZeroedYInterceptPropertyModel Id="3cf2451bb74492d89a9e5bdd3427429" />
+										</LinearScaleModel>
+									</VoltageSensor>
+									<DAQmxVoltageInput ElectricalUnits="[Unit]Volts" Filter="[Filter]None" Id="64417a3e758a48b481f64aa9a4a8f56c" TerminalConfiguration="[TerminalConfiguration]Rse" />
+									<AlarmModel Id="c11c763fd89c4536b1bbe95bfaa9ab7b" Severity="[AlarmSeverity]Warning" TriggerModel="75ea39b45acd41c69bee74fc794b8bc9" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]6fb672a7-42f1-4611-95b6-e6490bf6c41b" AliasToMonitor="[string]cDAQ1Mod1/ai2" Id="75ea39b45acd41c69bee74fc794b8bc9">
+											<AboveValueTriggerModel Id="73da6d9f9eb84cba9e0b15122b12657b" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+									<AlarmModel Id="700ddf52c9f645cab1af601afd533ffc" Severity="[AlarmSeverity]Critical" TriggerModel="7f0764f93688490595e5efd305cca0c4" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]a6744ed3-448b-46ff-b586-48369f6fa87f" AliasToMonitor="[string]cDAQ1Mod1/ai2" Id="7f0764f93688490595e5efd305cca0c4">
+											<AboveValueTriggerModel Id="143a167654cc42f5894e4f6ef885f0db" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+								</AnalogInputChannel>
+								<UnscaledChannelOutputInfo Alias="cDAQ1Mod1/ai2_Unscaled" CriticalAlarm="2382b42e568d4faeaa8000f2def86564" DataType="[Type]Wfm(Double)" Disabled="[bool]False" Id="19e6857c85b3427baf12c666fc040927" IsTag="[bool]True" SampleRate="[double]100" Source="cDAQ1Mod1/ai2" Units="[string]V" WarningAlarm="f898bd1c48b04653ac8242dc191acdbb">
+									<AlarmModel Id="2382b42e568d4faeaa8000f2def86564" Severity="[AlarmSeverity]Critical" TriggerModel="90b7816b9cd84e0bbea78477f5189c18" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]5d74448d-3d4e-4947-833d-b1c8746a271e" AliasToMonitor="[string]cDAQ1Mod1/ai2_Unscaled" Id="90b7816b9cd84e0bbea78477f5189c18">
+											<AboveValueTriggerModel Id="574f41c3bffd44b69e5137794c1d00ef" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+									<AlarmModel Id="f898bd1c48b04653ac8242dc191acdbb" Severity="[AlarmSeverity]Warning" TriggerModel="b86458b8032544409c6c52a93afeb7f3" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]57a7cde5-c1c5-45f8-b03f-7182386b17f4" AliasToMonitor="[string]cDAQ1Mod1/ai2_Unscaled" Id="b86458b8032544409c6c52a93afeb7f3">
+											<AboveValueTriggerModel Id="aa6a852a6b2642f79f81877501a89005" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+								</UnscaledChannelOutputInfo>
+								<ResampledChannelOutputInfo Alias="cDAQ1Mod1/ai2_Resampled" CriticalAlarm="b05423dde55747dab9f8665b5f177f02" DataType="[Type]Wfm(Double)" Disabled="[bool]False" Id="3edb08ecc0b14f92a54f2a743221a03d" SampleRate="[double]100" Source="cDAQ1Mod1/ai2" Units="[string]V" WarningAlarm="747ca991a4c346d9953e08c1fc7f87c6">
+									<AlarmModel Id="b05423dde55747dab9f8665b5f177f02" Severity="[AlarmSeverity]Critical" TriggerModel="5124f493285a489ba49510321ef3ff16" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]f04f45c7-0d26-4e90-bae4-80f8cd4d0e2b" AliasToMonitor="[string]cDAQ1Mod1/ai2_Resampled" Id="5124f493285a489ba49510321ef3ff16">
+											<AboveValueTriggerModel Id="8236aff59bf6427facc9b3673f4a595f" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+									<AlarmModel Id="747ca991a4c346d9953e08c1fc7f87c6" Severity="[AlarmSeverity]Warning" TriggerModel="ad217a2daf334fac8027642726b23183" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]31fbea01-b967-432c-9a6f-9cd023778cfb" AliasToMonitor="[string]cDAQ1Mod1/ai2_Resampled" Id="ad217a2daf334fac8027642726b23183">
+											<AboveValueTriggerModel Id="2bb18353d9974adf8ea27d4a8c143f0c" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+								</ResampledChannelOutputInfo>
+							</InputChannelAdapter>
+							<InputChannelAdapter Id="9404a20a15f54e1babde5d00b6446eec">
+								<AnalogInputChannel Alias="cDAQ1Mod1/ai3" CriticalAlarm="9e88585d081748b09f4fda0c80449679" DataType="[Type]Wfm(Double)" Disabled="[bool]False" ExpectedMaximum="[double]10" ExpectedMinimum="[double]-10" Id="d63af85bbeb74a03a6273242698d1992" LastTedsScanTimestamp="[DateTime]0001-01-01T06:00:00.0000000Z" PhysicalMeasurement="[PhysicalMeasurement]Temperature" SampleRate="[double]100" SensorClass="[SensorClass]Voltage" Source="cDAQ1Mod1/ai3" Units="[string]°C" WarningAlarm="78a762ad994a42429ca0907b9ec14fc6">
+									<VoltageSensor Coupling="[Coupling]DC" ElectricalMaximum="[double]10" ElectricalMinimum="[double]-10" Id="c0e7aae3f781450a811b41b98310fcf0" PhysicalMaximum="[double]10" PhysicalMinimum="[double]-10" ScaleType="[ScaleType]Linear">
+										<StandardUnitModel Id="2a56eb24876c49fd9359bb866efc97fb" Units="[Unit]DegreesCelsius" />
+										<LinearScaleModel Id="78710c8ffa3f4fd6944de3763237aa0f">
+											<SlopeScalePropertyModel Id="8f5c34128ab34a26a37701e56c5ac48a" SlopeUnit="[string]°C/V" />
+											<ZeroedYInterceptPropertyModel Id="92426699c9c848be9f2fbf88af9b836b" />
+										</LinearScaleModel>
+									</VoltageSensor>
+									<DAQmxVoltageInput ElectricalUnits="[Unit]Volts" Filter="[Filter]None" Id="87477491520a4c359b3f9e3a19ab5a64" TerminalConfiguration="[TerminalConfiguration]Rse" />
+									<AlarmModel Id="78a762ad994a42429ca0907b9ec14fc6" Severity="[AlarmSeverity]Warning" TriggerModel="eff01ffb73494b69bbf1d132e65a0eb9" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]6fb672a7-42f1-4611-95b6-e6490bf6c41b" AliasToMonitor="[string]cDAQ1Mod1/ai3" Id="eff01ffb73494b69bbf1d132e65a0eb9">
+											<AboveValueTriggerModel Id="52e6a0c2edc147ef9689135e6dae4d3c" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+									<AlarmModel Id="9e88585d081748b09f4fda0c80449679" Severity="[AlarmSeverity]Critical" TriggerModel="1a7d216f196345a5b1b24d0755c5408d" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]a6744ed3-448b-46ff-b586-48369f6fa87f" AliasToMonitor="[string]cDAQ1Mod1/ai3" Id="1a7d216f196345a5b1b24d0755c5408d">
+											<AboveValueTriggerModel Id="dea75d2ae0b04fa3866b7c478a386654" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+								</AnalogInputChannel>
+								<UnscaledChannelOutputInfo Alias="cDAQ1Mod1/ai3_Unscaled" CriticalAlarm="f6b0b0dcac7b4a548e14c0e8a82e08f9" DataType="[Type]Wfm(Double)" Disabled="[bool]False" Id="50a6bf07b32c407ba603878ffc56394f" IsTag="[bool]True" SampleRate="[double]100" Source="cDAQ1Mod1/ai3" Units="[string]V" WarningAlarm="1116673accb9433f91da672beb2ed559">
+									<AlarmModel Id="f6b0b0dcac7b4a548e14c0e8a82e08f9" Severity="[AlarmSeverity]Critical" TriggerModel="ac6831181961486aabfb75f1b98e15f5" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]24277471-bba5-41af-88f3-9b01888fcca3" AliasToMonitor="[string]cDAQ1Mod1/ai3_Unscaled" Id="ac6831181961486aabfb75f1b98e15f5">
+											<AboveValueTriggerModel Id="e664980bec7042ef94c1113806651cef" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+									<AlarmModel Id="1116673accb9433f91da672beb2ed559" Severity="[AlarmSeverity]Warning" TriggerModel="8350cff8a3a14917a8ec93420d64908a" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]d2919220-b5fd-4757-ae33-16afe1c0db19" AliasToMonitor="[string]cDAQ1Mod1/ai3_Unscaled" Id="8350cff8a3a14917a8ec93420d64908a">
+											<AboveValueTriggerModel Id="6538f31c4d6644fea7f816b9974a75a4" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+								</UnscaledChannelOutputInfo>
+								<ResampledChannelOutputInfo Alias="cDAQ1Mod1/ai3_Resampled" CriticalAlarm="d5c3f7e1fac64df8a48d6dabdfad1a4d" DataType="[Type]Wfm(Double)" Disabled="[bool]False" Id="407751d931c44cbf98fcb99d5dff5f79" SampleRate="[double]100" Source="cDAQ1Mod1/ai3" Units="[string]V" WarningAlarm="53ec59919a5e44d1b23a92c3e8b86ea3">
+									<AlarmModel Id="d5c3f7e1fac64df8a48d6dabdfad1a4d" Severity="[AlarmSeverity]Critical" TriggerModel="e913f471d9544f2598a62b2e4598b697" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]678c04a9-578d-4d12-bdd1-03caf9afe1af" AliasToMonitor="[string]cDAQ1Mod1/ai3_Resampled" Id="e913f471d9544f2598a62b2e4598b697">
+											<AboveValueTriggerModel Id="62da66ae894c46b1a86d3117a49a4b56" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+									<AlarmModel Id="53ec59919a5e44d1b23a92c3e8b86ea3" Severity="[AlarmSeverity]Warning" TriggerModel="7ae976ef9ddb411897a19c2041abbab3" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]f0510b5a-ee4c-4c3e-bafa-415412cd847e" AliasToMonitor="[string]cDAQ1Mod1/ai3_Resampled" Id="7ae976ef9ddb411897a19c2041abbab3">
+											<AboveValueTriggerModel Id="9e593470da5246689fc6894799475908" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+								</ResampledChannelOutputInfo>
+							</InputChannelAdapter>
+							<InputChannelAdapter Id="8536d2b58b044cc2a103209c338c67c4">
+								<AnalogInputChannel Alias="cDAQ1Mod1/ai4" CriticalAlarm="21aada1f17a448f8929f456b2b1cc6e7" DataType="[Type]Wfm(Double)" Disabled="[bool]False" ExpectedMaximum="[double]10" ExpectedMinimum="[double]-10" Id="ad5ff784dc014e97b1ac2e446802c51e" LastTedsScanTimestamp="[DateTime]0001-01-01T06:00:00.0000000Z" PhysicalMeasurement="[PhysicalMeasurement]Temperature" SampleRate="[double]100" SensorClass="[SensorClass]Voltage" Source="cDAQ1Mod1/ai4" Units="[string]°C" WarningAlarm="eef80a4e91fe440087ec300cc29c409b">
+									<VoltageSensor Coupling="[Coupling]DC" ElectricalMaximum="[double]10" ElectricalMinimum="[double]-10" Id="eec2018652214d2e8bc3935da22de968" PhysicalMaximum="[double]10" PhysicalMinimum="[double]-10" ScaleType="[ScaleType]Linear">
+										<StandardUnitModel Id="826764b35e3b44caab5d3ae500c491c7" Units="[Unit]DegreesCelsius" />
+										<LinearScaleModel Id="90d4c40753624fd2b010cfe7dab1bd9b">
+											<SlopeScalePropertyModel Id="6b7542cea5914016ab15d7caa3924b81" SlopeUnit="[string]°C/V" />
+											<ZeroedYInterceptPropertyModel Id="940712f5a9064c379f322c4fe5e23484" />
+										</LinearScaleModel>
+									</VoltageSensor>
+									<DAQmxVoltageInput ElectricalUnits="[Unit]Volts" Filter="[Filter]None" Id="94506e4807724a8981a7f6c5c21d1944" TerminalConfiguration="[TerminalConfiguration]Rse" />
+									<AlarmModel Id="eef80a4e91fe440087ec300cc29c409b" Severity="[AlarmSeverity]Warning" TriggerModel="fd8dcb5b9f8c4bd98212b7889dd173d7" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]6fb672a7-42f1-4611-95b6-e6490bf6c41b" AliasToMonitor="[string]cDAQ1Mod1/ai4" Id="fd8dcb5b9f8c4bd98212b7889dd173d7">
+											<AboveValueTriggerModel Id="b49f942ff30d4def9e1c2eb8df0c0b45" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+									<AlarmModel Id="21aada1f17a448f8929f456b2b1cc6e7" Severity="[AlarmSeverity]Critical" TriggerModel="3dca123633e949aba8c3f8bdfe520492" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]a6744ed3-448b-46ff-b586-48369f6fa87f" AliasToMonitor="[string]cDAQ1Mod1/ai4" Id="3dca123633e949aba8c3f8bdfe520492">
+											<AboveValueTriggerModel Id="4a36bc7066564facb9c5887d5efc42c8" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+								</AnalogInputChannel>
+								<UnscaledChannelOutputInfo Alias="cDAQ1Mod1/ai4_Unscaled" CriticalAlarm="8206ce35a7974cc3a49fb4dc2ce5fc1e" DataType="[Type]Wfm(Double)" Disabled="[bool]False" Id="8ded03ca0b4c456abf0e725aa1cd87ef" IsTag="[bool]True" SampleRate="[double]100" Source="cDAQ1Mod1/ai4" Units="[string]V" WarningAlarm="dc5dd87b06b04d76ba987f757afb9d3b">
+									<AlarmModel Id="8206ce35a7974cc3a49fb4dc2ce5fc1e" Severity="[AlarmSeverity]Critical" TriggerModel="d835d486c4c7430f8342dea747cda18a" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]c17a8914-1321-4a72-bea4-bcd3623f749c" AliasToMonitor="[string]cDAQ1Mod1/ai4_Unscaled" Id="d835d486c4c7430f8342dea747cda18a">
+											<AboveValueTriggerModel Id="3f9bc9e11aed4ae385de8dca4eb3be2b" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+									<AlarmModel Id="dc5dd87b06b04d76ba987f757afb9d3b" Severity="[AlarmSeverity]Warning" TriggerModel="db9b4eec03b46dc8d5491c9f9ce660f" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]8e9acafe-3dcc-4f3e-ae9a-e3f6ae8b07bb" AliasToMonitor="[string]cDAQ1Mod1/ai4_Unscaled" Id="db9b4eec03b46dc8d5491c9f9ce660f">
+											<AboveValueTriggerModel Id="a8066f1f88514558a9f0d0ac1188beeb" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+								</UnscaledChannelOutputInfo>
+								<ResampledChannelOutputInfo Alias="cDAQ1Mod1/ai4_Resampled" CriticalAlarm="c6b509a4d9214e78b0a45c974cb665d7" DataType="[Type]Wfm(Double)" Disabled="[bool]False" Id="6c50e3fa2e4942189b64e4764682ac63" SampleRate="[double]100" Source="cDAQ1Mod1/ai4" Units="[string]V" WarningAlarm="4fcca5664ce44275b8aff0682dcedf0d">
+									<AlarmModel Id="c6b509a4d9214e78b0a45c974cb665d7" Severity="[AlarmSeverity]Critical" TriggerModel="d9d7387d961e4c5981d41be63fcbd229" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]3c6e3033-de97-411f-b0c7-09f5930eeb98" AliasToMonitor="[string]cDAQ1Mod1/ai4_Resampled" Id="d9d7387d961e4c5981d41be63fcbd229">
+											<AboveValueTriggerModel Id="4cfe1b153f0d409aa2f237ec04dc8890" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+									<AlarmModel Id="4fcca5664ce44275b8aff0682dcedf0d" Severity="[AlarmSeverity]Warning" TriggerModel="ec82162928e8466e9589688751288b9b" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]0998583e-d5f9-4374-a327-a5f7486c4f37" AliasToMonitor="[string]cDAQ1Mod1/ai4_Resampled" Id="ec82162928e8466e9589688751288b9b">
+											<AboveValueTriggerModel Id="f024361c14be4a9496b131ba768a3283" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+								</ResampledChannelOutputInfo>
+							</InputChannelAdapter>
+							<InputChannelAdapter Id="651661533e184599b492b03b22f0ae91">
+								<AnalogInputChannel Alias="cDAQ1Mod1/ai5" CriticalAlarm="52029e1366274f6fbfaff6d328e0abac" DataType="[Type]Wfm(Double)" Disabled="[bool]False" ExpectedMaximum="[double]10" ExpectedMinimum="[double]-10" Id="30b8f248c58845e2b29f4ca612d0bbcd" LastTedsScanTimestamp="[DateTime]0001-01-01T06:00:00.0000000Z" PhysicalMeasurement="[PhysicalMeasurement]Temperature" SampleRate="[double]100" SensorClass="[SensorClass]Voltage" Source="cDAQ1Mod1/ai5" Units="[string]°C" WarningAlarm="f2361cac78a74e03ac6d909689bd1d4b">
+									<VoltageSensor Coupling="[Coupling]DC" ElectricalMaximum="[double]10" ElectricalMinimum="[double]-10" Id="5bc5564055494fae9bb7a23294fccdfe" PhysicalMaximum="[double]10" PhysicalMinimum="[double]-10" ScaleType="[ScaleType]Linear">
+										<StandardUnitModel Id="6cc4b9a31156402d982b72e7918b07b2" Units="[Unit]DegreesCelsius" />
+										<LinearScaleModel Id="c4ec7bcf4162453d9d256ef4ee18ce03">
+											<SlopeScalePropertyModel Id="7f52c0435ce041eaaf1c80602967848e" SlopeUnit="[string]°C/V" />
+											<ZeroedYInterceptPropertyModel Id="a914c4645c634ab399c09a6943f0e88a" />
+										</LinearScaleModel>
+									</VoltageSensor>
+									<DAQmxVoltageInput ElectricalUnits="[Unit]Volts" Filter="[Filter]None" Id="4601bfa51eb4fac92a9fb12806f14c8" TerminalConfiguration="[TerminalConfiguration]Rse" />
+									<AlarmModel Id="f2361cac78a74e03ac6d909689bd1d4b" Severity="[AlarmSeverity]Warning" TriggerModel="2983e3ba5693492394a97cd8099bdb1b" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]6fb672a7-42f1-4611-95b6-e6490bf6c41b" AliasToMonitor="[string]cDAQ1Mod1/ai5" Id="2983e3ba5693492394a97cd8099bdb1b">
+											<AboveValueTriggerModel Id="a83bb5067a2b434aa0acea25e4b3b303" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+									<AlarmModel Id="52029e1366274f6fbfaff6d328e0abac" Severity="[AlarmSeverity]Critical" TriggerModel="2039ff58b36946e49e6a413023e26b29" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]a6744ed3-448b-46ff-b586-48369f6fa87f" AliasToMonitor="[string]cDAQ1Mod1/ai5" Id="2039ff58b36946e49e6a413023e26b29">
+											<AboveValueTriggerModel Id="8fe7cb35016546349d88b1eef44d3816" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+								</AnalogInputChannel>
+								<UnscaledChannelOutputInfo Alias="cDAQ1Mod1/ai5_Unscaled" CriticalAlarm="ee24f560612b4bf8b06bd12c39ad2a4b" DataType="[Type]Wfm(Double)" Disabled="[bool]False" Id="b71461ddbb55463d827b79f48c6f3182" IsTag="[bool]True" SampleRate="[double]100" Source="cDAQ1Mod1/ai5" Units="[string]V" WarningAlarm="67baed37d0cf436bb2dc7558ee6293d6">
+									<AlarmModel Id="ee24f560612b4bf8b06bd12c39ad2a4b" Severity="[AlarmSeverity]Critical" TriggerModel="3d40abd7aed401e8e17a4bc86aa9259" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]aa2da813-1093-437d-a7d2-dbcc0473df7b" AliasToMonitor="[string]cDAQ1Mod1/ai5_Unscaled" Id="3d40abd7aed401e8e17a4bc86aa9259">
+											<AboveValueTriggerModel Id="2a24c315bb55428590ca10e89e5a0b9d" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+									<AlarmModel Id="67baed37d0cf436bb2dc7558ee6293d6" Severity="[AlarmSeverity]Warning" TriggerModel="4f7d2527e4864914b5abc0df44862b3d" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]17b142d8-3dd6-428b-9806-12e15f847e7b" AliasToMonitor="[string]cDAQ1Mod1/ai5_Unscaled" Id="4f7d2527e4864914b5abc0df44862b3d">
+											<AboveValueTriggerModel Id="877f0a8f1c748f58bc5f471ec838adf" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+								</UnscaledChannelOutputInfo>
+								<ResampledChannelOutputInfo Alias="cDAQ1Mod1/ai5_Resampled" CriticalAlarm="a72d80079be74a028b84df1def7a6e1e" DataType="[Type]Wfm(Double)" Disabled="[bool]False" Id="525fcb42eddd416cb1be26741483bfe7" SampleRate="[double]100" Source="cDAQ1Mod1/ai5" Units="[string]V" WarningAlarm="ceb9406000e04b25bd70dae88c9bf31b">
+									<AlarmModel Id="a72d80079be74a028b84df1def7a6e1e" Severity="[AlarmSeverity]Critical" TriggerModel="d575b09e96614454bd23b7248b1c1604" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]6adfc1c5-8243-41b1-b312-5dc20628bf63" AliasToMonitor="[string]cDAQ1Mod1/ai5_Resampled" Id="d575b09e96614454bd23b7248b1c1604">
+											<AboveValueTriggerModel Id="3658eedc9af94b9098d141492166da0a" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+									<AlarmModel Id="ceb9406000e04b25bd70dae88c9bf31b" Severity="[AlarmSeverity]Warning" TriggerModel="27e2596814864245a697284bbad36e8a" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]0ef0600f-6547-4d0d-b37e-8e558adcdec3" AliasToMonitor="[string]cDAQ1Mod1/ai5_Resampled" Id="27e2596814864245a697284bbad36e8a">
+											<AboveValueTriggerModel Id="34d526bd925843708200f694533a9eed" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+								</ResampledChannelOutputInfo>
+							</InputChannelAdapter>
+							<InputChannelAdapter Id="d6944951996f4dfcb0d3619bfca75004">
+								<AnalogInputChannel Alias="cDAQ1Mod1/ai6" CriticalAlarm="2ab27c8e9b15497d8c8d43cbbe6383ca" DataType="[Type]Wfm(Double)" Disabled="[bool]False" ExpectedMaximum="[double]10" ExpectedMinimum="[double]-10" Id="77788ecb88bd48e2b90335a246336b39" LastTedsScanTimestamp="[DateTime]0001-01-01T06:00:00.0000000Z" PhysicalMeasurement="[PhysicalMeasurement]Temperature" SampleRate="[double]100" SensorClass="[SensorClass]Voltage" Source="cDAQ1Mod1/ai6" Units="[string]°C" WarningAlarm="7927f8ec439b48be8d1dcceebae2d433">
+									<VoltageSensor Coupling="[Coupling]DC" ElectricalMaximum="[double]10" ElectricalMinimum="[double]-10" Id="1bc73b84ddb7466fb94bba243141360a" PhysicalMaximum="[double]10" PhysicalMinimum="[double]-10" ScaleType="[ScaleType]Linear">
+										<StandardUnitModel Id="3f826b58b34042ffae5fe399816751c8" Units="[Unit]DegreesCelsius" />
+										<LinearScaleModel Id="6b4d321e09014e85b66fd1281bf99039">
+											<SlopeScalePropertyModel Id="98db2d0c21bb42a2a2d3c40ba2154793" SlopeUnit="[string]°C/V" />
+											<ZeroedYInterceptPropertyModel Id="8ae9eaca75434858ba40356b7c2ba00d" />
+										</LinearScaleModel>
+									</VoltageSensor>
+									<DAQmxVoltageInput ElectricalUnits="[Unit]Volts" Filter="[Filter]None" Id="961af065dbda40e7b90515ae3f2335e3" TerminalConfiguration="[TerminalConfiguration]Rse" />
+									<AlarmModel Id="7927f8ec439b48be8d1dcceebae2d433" Severity="[AlarmSeverity]Warning" TriggerModel="8713c732ba7b439a8db0b5934f623d87" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]6fb672a7-42f1-4611-95b6-e6490bf6c41b" AliasToMonitor="[string]cDAQ1Mod1/ai6" Id="8713c732ba7b439a8db0b5934f623d87">
+											<AboveValueTriggerModel Id="5348b9ab170c4f038f3cfb763af1ceac" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+									<AlarmModel Id="2ab27c8e9b15497d8c8d43cbbe6383ca" Severity="[AlarmSeverity]Critical" TriggerModel="25329be275f64c2cb1ef6bf2e2db6c83" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]a6744ed3-448b-46ff-b586-48369f6fa87f" AliasToMonitor="[string]cDAQ1Mod1/ai6" Id="25329be275f64c2cb1ef6bf2e2db6c83">
+											<AboveValueTriggerModel Id="44bf4970c37d48d583617673f15b76d8" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+								</AnalogInputChannel>
+								<UnscaledChannelOutputInfo Alias="cDAQ1Mod1/ai6_Unscaled" CriticalAlarm="a655402aeb664e83bd027e79f00c12bc" DataType="[Type]Wfm(Double)" Disabled="[bool]False" Id="8780ff2142c547319f976f36e9f5adf8" IsTag="[bool]True" SampleRate="[double]100" Source="cDAQ1Mod1/ai6" Units="[string]V" WarningAlarm="b005e06cd43647cfa1195347d1afde30">
+									<AlarmModel Id="a655402aeb664e83bd027e79f00c12bc" Severity="[AlarmSeverity]Critical" TriggerModel="6301e4f3954b4cef8deab799fdaa2914" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]1d56c78d-740c-4515-8031-01eba8c9a7a9" AliasToMonitor="[string]cDAQ1Mod1/ai6_Unscaled" Id="6301e4f3954b4cef8deab799fdaa2914">
+											<AboveValueTriggerModel Id="1aa6185aba2948e88061527182a65882" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+									<AlarmModel Id="b005e06cd43647cfa1195347d1afde30" Severity="[AlarmSeverity]Warning" TriggerModel="74700e18bb04c7c99c0f75e68978646" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]90f6ea52-c67a-435f-8be2-27e229e782cb" AliasToMonitor="[string]cDAQ1Mod1/ai6_Unscaled" Id="74700e18bb04c7c99c0f75e68978646">
+											<AboveValueTriggerModel Id="dbbd7883f60846d58a82418812b5b31e" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+								</UnscaledChannelOutputInfo>
+								<ResampledChannelOutputInfo Alias="cDAQ1Mod1/ai6_Resampled" CriticalAlarm="dd425878e6ef4525b203492b96725667" DataType="[Type]Wfm(Double)" Disabled="[bool]False" Id="97c6c034ea724576b274d52bd13866d5" SampleRate="[double]100" Source="cDAQ1Mod1/ai6" Units="[string]V" WarningAlarm="984590dc719b46ef95c49ec55bf44cb6">
+									<AlarmModel Id="dd425878e6ef4525b203492b96725667" Severity="[AlarmSeverity]Critical" TriggerModel="6dafe795bf6048b2afb3da0c302db1b8" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]7411f221-9c06-4031-9d67-a24a19f5e373" AliasToMonitor="[string]cDAQ1Mod1/ai6_Resampled" Id="6dafe795bf6048b2afb3da0c302db1b8">
+											<AboveValueTriggerModel Id="3dc7e320133145b09db17617c7802398" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+									<AlarmModel Id="984590dc719b46ef95c49ec55bf44cb6" Severity="[AlarmSeverity]Warning" TriggerModel="f8af7b5c4d044a8d9d88a59508603785" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]c92fab8a-16de-424a-8a48-c6164d22591d" AliasToMonitor="[string]cDAQ1Mod1/ai6_Resampled" Id="f8af7b5c4d044a8d9d88a59508603785">
+											<AboveValueTriggerModel Id="acbaa6c6ed00471b96b5ab4210b3ab46" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+								</ResampledChannelOutputInfo>
+							</InputChannelAdapter>
+							<InputChannelAdapter Id="fd67f55962944b8b918f522cb977e764">
+								<AnalogInputChannel Alias="cDAQ1Mod1/ai7" CriticalAlarm="1fbae34e95e240598f2844d9152ca330" DataType="[Type]Wfm(Double)" Disabled="[bool]False" ExpectedMaximum="[double]10" ExpectedMinimum="[double]-10" Id="f9b8771a695b4ddea9a746ee7dbc8776" LastTedsScanTimestamp="[DateTime]0001-01-01T06:00:00.0000000Z" PhysicalMeasurement="[PhysicalMeasurement]Temperature" SampleRate="[double]100" SensorClass="[SensorClass]Voltage" Source="cDAQ1Mod1/ai7" Units="[string]°C" WarningAlarm="c55f8796eb094c369bd08526c47eecaa">
+									<VoltageSensor Coupling="[Coupling]DC" ElectricalMaximum="[double]10" ElectricalMinimum="[double]-10" Id="9681397773a34ee38a70d2554dfb2545" PhysicalMaximum="[double]10" PhysicalMinimum="[double]-10" ScaleType="[ScaleType]Linear">
+										<StandardUnitModel Id="71b0fc0fbd04488fb049267fa3b59d8b" Units="[Unit]DegreesCelsius" />
+										<LinearScaleModel Id="b190d0c68aa44adaa59f8d2ce2751365">
+											<SlopeScalePropertyModel Id="2abc417f5df74504b4232f4b47561ffb" SlopeUnit="[string]°C/V" />
+											<ZeroedYInterceptPropertyModel Id="656dcc36bce546c5a446c116a4a352ab" />
+										</LinearScaleModel>
+									</VoltageSensor>
+									<DAQmxVoltageInput ElectricalUnits="[Unit]Volts" Filter="[Filter]None" Id="c8ab86f2ab6249c2814e031bb0005b5b" TerminalConfiguration="[TerminalConfiguration]Rse" />
+									<AlarmModel Id="c55f8796eb094c369bd08526c47eecaa" Severity="[AlarmSeverity]Warning" TriggerModel="323ce2354ce044f89e42e221e043de20" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]6fb672a7-42f1-4611-95b6-e6490bf6c41b" AliasToMonitor="[string]cDAQ1Mod1/ai7" Id="323ce2354ce044f89e42e221e043de20">
+											<AboveValueTriggerModel Id="11a89f7146644e7aa89236ca5da38d19" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+									<AlarmModel Id="1fbae34e95e240598f2844d9152ca330" Severity="[AlarmSeverity]Critical" TriggerModel="9e76993d31e14140b77a891c23f2056d" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]a6744ed3-448b-46ff-b586-48369f6fa87f" AliasToMonitor="[string]cDAQ1Mod1/ai7" Id="9e76993d31e14140b77a891c23f2056d">
+											<AboveValueTriggerModel Id="c0256fc262744b619b95cffc6c42a587" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+								</AnalogInputChannel>
+								<UnscaledChannelOutputInfo Alias="cDAQ1Mod1/ai7_Unscaled" CriticalAlarm="a179e70bbc8f494eaa82461e0e915987" DataType="[Type]Wfm(Double)" Disabled="[bool]False" Id="8712922dc02b49b3b3050d90cd22bb78" IsTag="[bool]True" SampleRate="[double]100" Source="cDAQ1Mod1/ai7" Units="[string]V" WarningAlarm="c8d7210fce754b7ba6e7faaa04b19012">
+									<AlarmModel Id="a179e70bbc8f494eaa82461e0e915987" Severity="[AlarmSeverity]Critical" TriggerModel="2324a29154b24586b4dc9a152b063819" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]c9229695-4230-4476-b2af-77ec0a86161e" AliasToMonitor="[string]cDAQ1Mod1/ai7_Unscaled" Id="2324a29154b24586b4dc9a152b063819">
+											<AboveValueTriggerModel Id="6be6413beec44bd3ab733d2484baa2b8" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+									<AlarmModel Id="c8d7210fce754b7ba6e7faaa04b19012" Severity="[AlarmSeverity]Warning" TriggerModel="804fe517b8a54befb375b1361bee3b53" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]c4db8435-9e2a-4747-a0df-792bc3c8ad8e" AliasToMonitor="[string]cDAQ1Mod1/ai7_Unscaled" Id="804fe517b8a54befb375b1361bee3b53">
+											<AboveValueTriggerModel Id="9b57a38e9ca140aa9ecd3d2c661e5872" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+								</UnscaledChannelOutputInfo>
+								<ResampledChannelOutputInfo Alias="cDAQ1Mod1/ai7_Resampled" CriticalAlarm="235e43077753409088ae0afc89812d38" DataType="[Type]Wfm(Double)" Disabled="[bool]False" Id="2df1b0cb9bf743eaad969258e5ba908b" SampleRate="[double]100" Source="cDAQ1Mod1/ai7" Units="[string]V" WarningAlarm="566f5e5fd77c4c9884453747da26a77f">
+									<AlarmModel Id="235e43077753409088ae0afc89812d38" Severity="[AlarmSeverity]Critical" TriggerModel="9ea2567090b44199ad5feaf3b394a952" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]f473a63b-c4fb-4cfc-a561-b7cf798d7352" AliasToMonitor="[string]cDAQ1Mod1/ai7_Resampled" Id="9ea2567090b44199ad5feaf3b394a952">
+											<AboveValueTriggerModel Id="80d1f66a0b59424ca265f7320560645d" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+									<AlarmModel Id="566f5e5fd77c4c9884453747da26a77f" Severity="[AlarmSeverity]Warning" TriggerModel="2e696dcb48a74784b62deb1f3851b243" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]2783a422-91e2-4d0e-b2df-237f588c766a" AliasToMonitor="[string]cDAQ1Mod1/ai7_Resampled" Id="2e696dcb48a74784b62deb1f3851b243">
+											<AboveValueTriggerModel Id="b92810613aa44638884e68551330de73" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+								</ResampledChannelOutputInfo>
+							</InputChannelAdapter>
+						</UnidirectionalDAQmxModuleModel>
+						<UnidirectionalDAQmxModuleModel Chassis="[string]cDAQ1" ChassisSerialNumber="[string]" DeviceLabel="[string]CSeriesVoltageInputModule" DeviceName="[string]cDAQ1Mod3" DeviceType="[DeviceType]CompactDaq" IconPath="[string]pack://application:,,,/NationalInstruments.DAQmx.SystemDesigner.Plugin;component/NineGridImages/PartsView_Voltage_24x24.xml" Id="c165809fa57b4c00950e3b750176f00d" IsSimulated="[bool]True" ProductIdentifier="[ulong]29381" ProductName="[string]NI 9201" SampleRateLevel="[SampleRateLevel]Medium" SerialNumber="[string]" Slot="[ulong]3" SmallIconPath="[string]pack://application:,,,/NationalInstruments.DAQmx.SystemDesigner.Plugin;component/NineGridImages/TableView_Voltage_16x16.xml" StyleProviderId="[string]CdaqModuleDisplayStrategyProvider">
+							<InputChannelAdapter Id="972954f75f704ad09fd2abad795e8db1">
+								<AnalogInputChannel Alias="cDAQ1Mod3/ai0" CriticalAlarm="5b5d132c12444b88a8c8f103bc5a664d" DataType="[Type]Wfm(Double)" ExpectedMaximum="[double]10" ExpectedMinimum="[double]-10" Id="c0e14206cbbe43c0ba3644509b6065e2" LastTedsScanTimestamp="[DateTime]0001-01-01T06:00:00.0000000Z" PhysicalMeasurement="[PhysicalMeasurement]Voltage" SampleRate="[double]100" SensorClass="[SensorClass]Voltage" Source="cDAQ1Mod3/ai0" Units="[string]V" WarningAlarm="4f1af91b40d8425dac84ed9e5d254d85">
+									<DAQmxVoltageInput ElectricalUnits="[Unit]Volts" Filter="[Filter]None" Id="ee2b40e27e124b49bce03e309545040d" TerminalConfiguration="[TerminalConfiguration]Rse" />
+									<VoltageSensor Coupling="[Coupling]DC" ElectricalMaximum="[double]10" ElectricalMinimum="[double]-10" Id="38391b13f0a94fa8bf805e46d1883a4a" PhysicalMaximum="[double]10" PhysicalMinimum="[double]-10" ScaleType="[ScaleType]Linear">
+										<StandardUnitModel Id="56fd66dfe8194f259678aaf8e8cd73ad" Units="[Unit]Volts" />
+										<LinearScaleModel Id="2712f0e033d4463cb913bbb180c2ac9f">
+											<SlopeScalePropertyModel Id="8ff651fd62b4478fabd07814af73bdab" SlopeUnit="[string]V/V" />
+											<ZeroedYInterceptPropertyModel Id="9f3082ee3e2142cf86a49e8326ed09cd" />
+										</LinearScaleModel>
+									</VoltageSensor>
+									<AlarmModel Id="5b5d132c12444b88a8c8f103bc5a664d" Severity="[AlarmSeverity]Critical" TriggerModel="ff2a4592125949f8a10848fe63c63d71" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]d1d4ab74-28ac-4168-b601-a79b46dcf363" AliasToMonitor="[string]cDAQ1Mod3/ai0" Id="ff2a4592125949f8a10848fe63c63d71">
+											<AboveValueTriggerModel Id="a6e7bfb02a88405a9c6fcd37af620d5e" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+									<AlarmModel Id="4f1af91b40d8425dac84ed9e5d254d85" Severity="[AlarmSeverity]Warning" TriggerModel="9b97d910cc4c4961bb229c2f2495ac5e" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]20a8126e-08cb-4b55-b7d6-98d706aa0f3d" AliasToMonitor="[string]cDAQ1Mod3/ai0" Id="9b97d910cc4c4961bb229c2f2495ac5e">
+											<AboveValueTriggerModel Id="9071b7bf16dc447193ba60f672cf7c0d" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+								</AnalogInputChannel>
+								<UnscaledChannelOutputInfo Alias="cDAQ1Mod3/ai0_Unscaled" CriticalAlarm="d8d37c4ea9664de79604f7ecf3d02139" DataType="[Type]Wfm(Double)" Id="994664699dad43aa9c8e4e75fe497e49" IsTag="[bool]True" SampleRate="[double]100" Source="cDAQ1Mod3/ai0" Units="[string]V" WarningAlarm="5c079b9afc68422481bdb764659959ae">
+									<AlarmModel Id="d8d37c4ea9664de79604f7ecf3d02139" Severity="[AlarmSeverity]Critical" TriggerModel="5ec83e39d6914a71bb8320d40a78831e" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]5469a325-f328-4b6e-a61b-71d0d351402a" AliasToMonitor="[string]cDAQ1Mod3/ai0_Unscaled" Id="5ec83e39d6914a71bb8320d40a78831e">
+											<AboveValueTriggerModel Id="84170b47fee24b519bfb5a0c2288d4a3" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+									<AlarmModel Id="5c079b9afc68422481bdb764659959ae" Severity="[AlarmSeverity]Warning" TriggerModel="869068a6f21340c0a98cb6f41d3e5546" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]011a83dc-7178-4024-a949-ccd0836424e0" AliasToMonitor="[string]cDAQ1Mod3/ai0_Unscaled" Id="869068a6f21340c0a98cb6f41d3e5546">
+											<AboveValueTriggerModel Id="3eb4874b2db94b2588a790e25e6c72ef" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+								</UnscaledChannelOutputInfo>
+								<ResampledChannelOutputInfo Alias="cDAQ1Mod3/ai0_Resampled" CriticalAlarm="6c266b713ad4641954dca4a67503ab2" DataType="[Type]Wfm(Double)" Id="23212f226d674c18ba7a852fb34ae662" SampleRate="[double]100" Source="cDAQ1Mod3/ai0" Units="[string]V" WarningAlarm="6c082fb5027b485294b5622d58fe4094">
+									<AlarmModel Id="6c266b713ad4641954dca4a67503ab2" Severity="[AlarmSeverity]Critical" TriggerModel="36cca1d965b141c2af3d3fa1a54f0f84" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]4180f4dc-c340-4ace-9b4a-db7276021000" AliasToMonitor="[string]cDAQ1Mod3/ai0_Resampled" Id="36cca1d965b141c2af3d3fa1a54f0f84">
+											<AboveValueTriggerModel Id="c4f3cdf27194d89b960ddfb351a045c" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+									<AlarmModel Id="6c082fb5027b485294b5622d58fe4094" Severity="[AlarmSeverity]Warning" TriggerModel="f8063b6149334dc3acde6ab8bfc208b1" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]9c2a4fb5-baef-454b-8d5c-9be335dc077d" AliasToMonitor="[string]cDAQ1Mod3/ai0_Resampled" Id="f8063b6149334dc3acde6ab8bfc208b1">
+											<AboveValueTriggerModel Id="547ca5b297ad4af2944de14dd8846d05" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+								</ResampledChannelOutputInfo>
+							</InputChannelAdapter>
+							<InputChannelAdapter Id="9b0bd256baa44626bef2d67383d1328f">
+								<AnalogInputChannel Alias="cDAQ1Mod3/ai1" CriticalAlarm="bd6749802de4e058517653c66887ff1" DataType="[Type]Wfm(Double)" Disabled="[bool]False" ExpectedMaximum="[double]10" ExpectedMinimum="[double]-10" Id="73ae9c0af418424aa7b96b3e35a1f7e5" LastTedsScanTimestamp="[DateTime]0001-01-01T06:00:00.0000000Z" PhysicalMeasurement="[PhysicalMeasurement]Voltage" SampleRate="[double]100" SensorClass="[SensorClass]Voltage" Source="cDAQ1Mod3/ai1" Units="[string]V" WarningAlarm="bf130699fe4486c9860ff3df7ef013d">
+									<VoltageSensor Coupling="[Coupling]DC" ElectricalMaximum="[double]10" ElectricalMinimum="[double]-10" Id="417fc85b2ca342f4bc2f7b58a5ab9d29" PhysicalMaximum="[double]10" PhysicalMinimum="[double]-10" ScaleType="[ScaleType]Linear">
+										<StandardUnitModel Id="b0d02b61340546d2aed8774605fbcccc" Units="[Unit]Volts" />
+										<LinearScaleModel Id="472bf9ac1746496193aca994fea10609">
+											<SlopeScalePropertyModel Id="33b937b27ef84ef3a4cc55f4db75e531" SlopeUnit="[string]V/V" />
+											<ZeroedYInterceptPropertyModel Id="94261281c071475c9801729eaffcff27" />
+										</LinearScaleModel>
+									</VoltageSensor>
+									<DAQmxVoltageInput ElectricalUnits="[Unit]Volts" Filter="[Filter]None" Id="643bafd1df5f4c14900ec311e5f7a8db" TerminalConfiguration="[TerminalConfiguration]Rse" />
+									<AlarmModel Id="bf130699fe4486c9860ff3df7ef013d" Severity="[AlarmSeverity]Warning" TriggerModel="17f5c6d1ce88407e87c3011967f344b7" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]20a8126e-08cb-4b55-b7d6-98d706aa0f3d" AliasToMonitor="[string]cDAQ1Mod3/ai1" Id="17f5c6d1ce88407e87c3011967f344b7">
+											<AboveValueTriggerModel Id="6031827dc89c4e5383088f47e4e12e06" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+									<AlarmModel Id="bd6749802de4e058517653c66887ff1" Severity="[AlarmSeverity]Critical" TriggerModel="85b988b16dab4c23a7b28ff18a568c2c" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]d1d4ab74-28ac-4168-b601-a79b46dcf363" AliasToMonitor="[string]cDAQ1Mod3/ai1" Id="85b988b16dab4c23a7b28ff18a568c2c">
+											<AboveValueTriggerModel Id="fc263310e226482abbfb0230c8d863ad" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+								</AnalogInputChannel>
+								<UnscaledChannelOutputInfo Alias="cDAQ1Mod3/ai1_Unscaled" CriticalAlarm="d42c944e6001457687dc081e614395e1" DataType="[Type]Wfm(Double)" Disabled="[bool]False" Id="4d09136ac0b74d9da6b1c03bed96de17" IsTag="[bool]True" SampleRate="[double]100" Source="cDAQ1Mod3/ai1" Units="[string]V" WarningAlarm="df74df72ef3f41b4b9cd57ac50fff6ee">
+									<AlarmModel Id="d42c944e6001457687dc081e614395e1" Severity="[AlarmSeverity]Critical" TriggerModel="76c47372b80a45b397a600e0db45b019" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]709f889b-6aa1-4593-aab7-9300a32c271f" AliasToMonitor="[string]cDAQ1Mod3/ai1_Unscaled" Id="76c47372b80a45b397a600e0db45b019">
+											<AboveValueTriggerModel Id="c46564c39cfc4b8db8f2ee70579e6d85" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+									<AlarmModel Id="df74df72ef3f41b4b9cd57ac50fff6ee" Severity="[AlarmSeverity]Warning" TriggerModel="dd8c323eb9984c5fafd6be83c5fbd329" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]1485ef3d-9efa-4ed5-9261-7324b28a3de1" AliasToMonitor="[string]cDAQ1Mod3/ai1_Unscaled" Id="dd8c323eb9984c5fafd6be83c5fbd329">
+											<AboveValueTriggerModel Id="2ec6783ec0ff4dd1a326c7a99c19503a" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+								</UnscaledChannelOutputInfo>
+								<ResampledChannelOutputInfo Alias="cDAQ1Mod3/ai1_Resampled" CriticalAlarm="b76baf436d9946548c5290437af1fdf8" DataType="[Type]Wfm(Double)" Disabled="[bool]False" Id="2b9c0c8819cf47689534216ec4f198c1" SampleRate="[double]100" Source="cDAQ1Mod3/ai1" Units="[string]V" WarningAlarm="8d84747d45c44b4e81dda4c2da3264e3">
+									<AlarmModel Id="b76baf436d9946548c5290437af1fdf8" Severity="[AlarmSeverity]Critical" TriggerModel="d35794bd14e04574a22f7cb26bd98c49" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]cccdb70f-2ac8-41e8-8373-9ccd20a2c2ab" AliasToMonitor="[string]cDAQ1Mod3/ai1_Resampled" Id="d35794bd14e04574a22f7cb26bd98c49">
+											<AboveValueTriggerModel Id="a886d373163b4322a08e07617375bcf8" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+									<AlarmModel Id="8d84747d45c44b4e81dda4c2da3264e3" Severity="[AlarmSeverity]Warning" TriggerModel="e4e34ff2bd834a048e89ab4a70b12074" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]3918af09-8d14-4eb8-a151-81f5c9b15e96" AliasToMonitor="[string]cDAQ1Mod3/ai1_Resampled" Id="e4e34ff2bd834a048e89ab4a70b12074">
+											<AboveValueTriggerModel Id="d124efb2904842399efa3f7c92a8d244" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+								</ResampledChannelOutputInfo>
+							</InputChannelAdapter>
+							<InputChannelAdapter Id="cae5c651a87d4ee4b4ef72774f350b72">
+								<AnalogInputChannel Alias="cDAQ1Mod3/ai2" CriticalAlarm="9e1c1bc55ce64617b1b54fe4c4542d28" DataType="[Type]Wfm(Double)" Disabled="[bool]False" ExpectedMaximum="[double]10" ExpectedMinimum="[double]-10" Id="8ca04688697d4dac9d3c03dc972022ee" LastTedsScanTimestamp="[DateTime]0001-01-01T06:00:00.0000000Z" PhysicalMeasurement="[PhysicalMeasurement]Voltage" SampleRate="[double]100" SensorClass="[SensorClass]Voltage" Source="cDAQ1Mod3/ai2" Units="[string]V" WarningAlarm="a67a8ae105da40edb2ba2f9e252b2df7">
+									<VoltageSensor Coupling="[Coupling]DC" ElectricalMaximum="[double]10" ElectricalMinimum="[double]-10" Id="9fe8d7f54b834a07a5517ef6f819d946" PhysicalMaximum="[double]10" PhysicalMinimum="[double]-10" ScaleType="[ScaleType]Linear">
+										<StandardUnitModel Id="66036bec06a94d648ec2cffafd793253" Units="[Unit]Volts" />
+										<LinearScaleModel Id="35504af5f0964180adb5a03915174c85">
+											<SlopeScalePropertyModel Id="43a17af3bddd49539eedf5c02e7ef4d8" SlopeUnit="[string]V/V" />
+											<ZeroedYInterceptPropertyModel Id="ec4350082f174327bb07de19cca12d71" />
+										</LinearScaleModel>
+									</VoltageSensor>
+									<DAQmxVoltageInput ElectricalUnits="[Unit]Volts" Filter="[Filter]None" Id="3020c5a9099644b0a514f92ed7b16264" TerminalConfiguration="[TerminalConfiguration]Rse" />
+									<AlarmModel Id="a67a8ae105da40edb2ba2f9e252b2df7" Severity="[AlarmSeverity]Warning" TriggerModel="d9b35014ff134f7ca12a023b2cb0bda5" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]20a8126e-08cb-4b55-b7d6-98d706aa0f3d" AliasToMonitor="[string]cDAQ1Mod3/ai2" Id="d9b35014ff134f7ca12a023b2cb0bda5">
+											<AboveValueTriggerModel Id="beefae3176314feb86ed21c2dcc7a720" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+									<AlarmModel Id="9e1c1bc55ce64617b1b54fe4c4542d28" Severity="[AlarmSeverity]Critical" TriggerModel="5653906a21de479b8083fb73c57670dc" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]d1d4ab74-28ac-4168-b601-a79b46dcf363" AliasToMonitor="[string]cDAQ1Mod3/ai2" Id="5653906a21de479b8083fb73c57670dc">
+											<AboveValueTriggerModel Id="1373e1a82439482787111c3db57a4d2b" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+								</AnalogInputChannel>
+								<UnscaledChannelOutputInfo Alias="cDAQ1Mod3/ai2_Unscaled" CriticalAlarm="b8796212bab64eb295e2b44b027e3bd6" DataType="[Type]Wfm(Double)" Disabled="[bool]False" Id="494b75f5c5a34f329247e9d284851120" IsTag="[bool]True" SampleRate="[double]100" Source="cDAQ1Mod3/ai2" Units="[string]V" WarningAlarm="f0cf72a2c0e94a39aaee7b991d214572">
+									<AlarmModel Id="b8796212bab64eb295e2b44b027e3bd6" Severity="[AlarmSeverity]Critical" TriggerModel="e28dbc0fa8fd4421a916b20f7508430c" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]1c8a60d9-bac9-4935-8ea7-948d56586b3f" AliasToMonitor="[string]cDAQ1Mod3/ai2_Unscaled" Id="e28dbc0fa8fd4421a916b20f7508430c">
+											<AboveValueTriggerModel Id="610ca96081ca4967ad8c1d9f5b6f5530" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+									<AlarmModel Id="f0cf72a2c0e94a39aaee7b991d214572" Severity="[AlarmSeverity]Warning" TriggerModel="5f3d69946e5c4ca8bd1651c774d01401" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]a0de9f58-9593-4f59-a29a-a848e48a4919" AliasToMonitor="[string]cDAQ1Mod3/ai2_Unscaled" Id="5f3d69946e5c4ca8bd1651c774d01401">
+											<AboveValueTriggerModel Id="cfc7d1c0073422193d639e5e1326587" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+								</UnscaledChannelOutputInfo>
+								<ResampledChannelOutputInfo Alias="cDAQ1Mod3/ai2_Resampled" CriticalAlarm="30e4d1393e6d42ca895d82d66b122ef4" DataType="[Type]Wfm(Double)" Disabled="[bool]False" Id="c8d175306a504c9abfdf992fdc0b2e8c" SampleRate="[double]100" Source="cDAQ1Mod3/ai2" Units="[string]V" WarningAlarm="7d448e137501468d8b7d0a0bb609df06">
+									<AlarmModel Id="30e4d1393e6d42ca895d82d66b122ef4" Severity="[AlarmSeverity]Critical" TriggerModel="81256774f0a14d6faebfd8edc809486a" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]eb162b0d-2428-4216-af7e-649e32e77cb3" AliasToMonitor="[string]cDAQ1Mod3/ai2_Resampled" Id="81256774f0a14d6faebfd8edc809486a">
+											<AboveValueTriggerModel Id="5e0abcf30bdb442d9b0ca7692f50f01c" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+									<AlarmModel Id="7d448e137501468d8b7d0a0bb609df06" Severity="[AlarmSeverity]Warning" TriggerModel="e847ece1e77e4ed5981b87e2286e747f" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]502f7f1a-b79c-4baf-b281-ab25bb3fc945" AliasToMonitor="[string]cDAQ1Mod3/ai2_Resampled" Id="e847ece1e77e4ed5981b87e2286e747f">
+											<AboveValueTriggerModel Id="33ff2cc5425e411eb0a5ce0eba821734" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+								</ResampledChannelOutputInfo>
+							</InputChannelAdapter>
+							<InputChannelAdapter Id="ac65e232902943b2ab7a21d1cc8bcd2c">
+								<AnalogInputChannel Alias="cDAQ1Mod3/ai3" CriticalAlarm="ca87252f1c7e4c1fa7d74609220dbe66" DataType="[Type]Wfm(Double)" Disabled="[bool]False" ExpectedMaximum="[double]10" ExpectedMinimum="[double]-10" Id="f1094261689f491c9ecbd1e3fb8085d2" LastTedsScanTimestamp="[DateTime]0001-01-01T06:00:00.0000000Z" PhysicalMeasurement="[PhysicalMeasurement]Voltage" SampleRate="[double]100" SensorClass="[SensorClass]Voltage" Source="cDAQ1Mod3/ai3" Units="[string]V" WarningAlarm="b34a8379e310438a8befaae2ec3bafb4">
+									<VoltageSensor Coupling="[Coupling]DC" ElectricalMaximum="[double]10" ElectricalMinimum="[double]-10" Id="556e6e96c4df4a86ae4a2706f5b63839" PhysicalMaximum="[double]10" PhysicalMinimum="[double]-10" ScaleType="[ScaleType]Linear">
+										<StandardUnitModel Id="b1b40323ce3b41da8436ce1de03cd980" Units="[Unit]Volts" />
+										<LinearScaleModel Id="b7fa91d2230d4179896275a178441dbe">
+											<SlopeScalePropertyModel Id="4dde3974a22e41468f2c028cc1ee5e4e" SlopeUnit="[string]V/V" />
+											<ZeroedYInterceptPropertyModel Id="3bf4fd6df8774d53a254634ceb478f23" />
+										</LinearScaleModel>
+									</VoltageSensor>
+									<DAQmxVoltageInput ElectricalUnits="[Unit]Volts" Filter="[Filter]None" Id="18ff64baf9b47988ae84efee007dd31" TerminalConfiguration="[TerminalConfiguration]Rse" />
+									<AlarmModel Id="b34a8379e310438a8befaae2ec3bafb4" Severity="[AlarmSeverity]Warning" TriggerModel="9ee7c1ada5664369a8c23f50474b0fd3" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]20a8126e-08cb-4b55-b7d6-98d706aa0f3d" AliasToMonitor="[string]cDAQ1Mod3/ai3" Id="9ee7c1ada5664369a8c23f50474b0fd3">
+											<AboveValueTriggerModel Id="8047b4e3d992486aaa1cd1f5cd717f4c" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+									<AlarmModel Id="ca87252f1c7e4c1fa7d74609220dbe66" Severity="[AlarmSeverity]Critical" TriggerModel="1e35e8af1cbe49958b6db5744bbe1d52" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]d1d4ab74-28ac-4168-b601-a79b46dcf363" AliasToMonitor="[string]cDAQ1Mod3/ai3" Id="1e35e8af1cbe49958b6db5744bbe1d52">
+											<AboveValueTriggerModel Id="4ba8a4ddb67f42f3bae4aafa35115c51" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+								</AnalogInputChannel>
+								<UnscaledChannelOutputInfo Alias="cDAQ1Mod3/ai3_Unscaled" CriticalAlarm="d22cbce46a04f0aa2ce92ba2c7b9b26" DataType="[Type]Wfm(Double)" Disabled="[bool]False" Id="4116e579f3fe4e75ad07aef5aa80f683" IsTag="[bool]True" SampleRate="[double]100" Source="cDAQ1Mod3/ai3" Units="[string]V" WarningAlarm="beec2d9aeb5f45fcb10cb0e20076ff90">
+									<AlarmModel Id="d22cbce46a04f0aa2ce92ba2c7b9b26" Severity="[AlarmSeverity]Critical" TriggerModel="b636c7aa0c9e49d1b439c1bb10f16b73" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]de1d1309-585f-450d-be00-ba00f31bfafe" AliasToMonitor="[string]cDAQ1Mod3/ai3_Unscaled" Id="b636c7aa0c9e49d1b439c1bb10f16b73">
+											<AboveValueTriggerModel Id="4ab40dfc459d4695bf549598f294a349" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+									<AlarmModel Id="beec2d9aeb5f45fcb10cb0e20076ff90" Severity="[AlarmSeverity]Warning" TriggerModel="90b2601bd76149aaae14f66d08fba32d" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]fd5b3af6-cf6f-4897-9d0e-d04bf1d4ff0a" AliasToMonitor="[string]cDAQ1Mod3/ai3_Unscaled" Id="90b2601bd76149aaae14f66d08fba32d">
+											<AboveValueTriggerModel Id="8347f8d27b48431797d72a3c9923c092" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+								</UnscaledChannelOutputInfo>
+								<ResampledChannelOutputInfo Alias="cDAQ1Mod3/ai3_Resampled" CriticalAlarm="59536d352d3e4eba8b55530563407802" DataType="[Type]Wfm(Double)" Disabled="[bool]False" Id="7db2b57f53904e488b908eac7fb8b6a1" SampleRate="[double]100" Source="cDAQ1Mod3/ai3" Units="[string]V" WarningAlarm="dae126d7d6284f7b9cfdd80a1fad748e">
+									<AlarmModel Id="59536d352d3e4eba8b55530563407802" Severity="[AlarmSeverity]Critical" TriggerModel="43b919f1e8eb4928ac740aa2e0414424" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]ab8006fb-50b1-417d-92bb-9247c7ba1d6f" AliasToMonitor="[string]cDAQ1Mod3/ai3_Resampled" Id="43b919f1e8eb4928ac740aa2e0414424">
+											<AboveValueTriggerModel Id="e85c85cc2d374a8eb93545ba22d4b0c7" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+									<AlarmModel Id="dae126d7d6284f7b9cfdd80a1fad748e" Severity="[AlarmSeverity]Warning" TriggerModel="64ccf895d43a40679ccbddef1a741790" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]498170be-8830-4015-bca1-51d3893c24d4" AliasToMonitor="[string]cDAQ1Mod3/ai3_Resampled" Id="64ccf895d43a40679ccbddef1a741790">
+											<AboveValueTriggerModel Id="4fd2b08d522d437591befd654f91e2d9" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+								</ResampledChannelOutputInfo>
+							</InputChannelAdapter>
+							<InputChannelAdapter Id="6931207733654e868c81b97a0d16c26e">
+								<AnalogInputChannel Alias="cDAQ1Mod3/ai4" CriticalAlarm="895171f2e43b46eeb0b8ff0e57d5befd" DataType="[Type]Wfm(Double)" Disabled="[bool]False" ExpectedMaximum="[double]10" ExpectedMinimum="[double]-10" Id="a78864e7f48d43649e4d6770d309d9b3" LastTedsScanTimestamp="[DateTime]0001-01-01T06:00:00.0000000Z" PhysicalMeasurement="[PhysicalMeasurement]Voltage" SampleRate="[double]100" SensorClass="[SensorClass]Voltage" Source="cDAQ1Mod3/ai4" Units="[string]V" WarningAlarm="74b1282050884174b59442d5dd626e7f">
+									<VoltageSensor Coupling="[Coupling]DC" ElectricalMaximum="[double]10" ElectricalMinimum="[double]-10" Id="76f2e3a1c032439d9b436f75aff2034e" PhysicalMaximum="[double]10" PhysicalMinimum="[double]-10" ScaleType="[ScaleType]Linear">
+										<StandardUnitModel Id="994e0469a5bb4b9b8c3e1d5286a0c1a7" Units="[Unit]Volts" />
+										<LinearScaleModel Id="c6b8d60075604a9d911d2ca4fb8c51fe">
+											<SlopeScalePropertyModel Id="4250bb3515fc4ee89d44106371218863" SlopeUnit="[string]V/V" />
+											<ZeroedYInterceptPropertyModel Id="f6b1c523d15f41978262ec1df10b89ca" />
+										</LinearScaleModel>
+									</VoltageSensor>
+									<DAQmxVoltageInput ElectricalUnits="[Unit]Volts" Filter="[Filter]None" Id="60d018aae1c04ce1a9a1d91d24b11d7b" TerminalConfiguration="[TerminalConfiguration]Rse" />
+									<AlarmModel Id="74b1282050884174b59442d5dd626e7f" Severity="[AlarmSeverity]Warning" TriggerModel="1faa74ce9eb244be88849001e2ce7dc5" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]20a8126e-08cb-4b55-b7d6-98d706aa0f3d" AliasToMonitor="[string]cDAQ1Mod3/ai4" Id="1faa74ce9eb244be88849001e2ce7dc5">
+											<AboveValueTriggerModel Id="a687477e2ce244f388e6f6656d4cd114" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+									<AlarmModel Id="895171f2e43b46eeb0b8ff0e57d5befd" Severity="[AlarmSeverity]Critical" TriggerModel="bd32554cc57d4cf89c58170fa310ac28" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]d1d4ab74-28ac-4168-b601-a79b46dcf363" AliasToMonitor="[string]cDAQ1Mod3/ai4" Id="bd32554cc57d4cf89c58170fa310ac28">
+											<AboveValueTriggerModel Id="3b831f193ef749329c300cd603757cdb" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+								</AnalogInputChannel>
+								<UnscaledChannelOutputInfo Alias="cDAQ1Mod3/ai4_Unscaled" CriticalAlarm="6c58d31b8bac4da094d0f07b80ee48f9" DataType="[Type]Wfm(Double)" Disabled="[bool]False" Id="c7c415df0a8d411b9d4cc9044d1cfdf2" IsTag="[bool]True" SampleRate="[double]100" Source="cDAQ1Mod3/ai4" Units="[string]V" WarningAlarm="350724481bc84f66a772bcc9c313a692">
+									<AlarmModel Id="6c58d31b8bac4da094d0f07b80ee48f9" Severity="[AlarmSeverity]Critical" TriggerModel="6ce1a8ab535c47eabaa63fb31bd5a4bb" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]3777e8ab-9264-48a2-9473-ee97a9aeff44" AliasToMonitor="[string]cDAQ1Mod3/ai4_Unscaled" Id="6ce1a8ab535c47eabaa63fb31bd5a4bb">
+											<AboveValueTriggerModel Id="f465818d44c74fd19fd4a417e9f03459" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+									<AlarmModel Id="350724481bc84f66a772bcc9c313a692" Severity="[AlarmSeverity]Warning" TriggerModel="edb41e1c77dd4586bea26765a9334b22" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]445a4d75-17cb-40be-8290-225c20dc7bae" AliasToMonitor="[string]cDAQ1Mod3/ai4_Unscaled" Id="edb41e1c77dd4586bea26765a9334b22">
+											<AboveValueTriggerModel Id="1fbfb7a42e64f4c91dc281df1892a16" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+								</UnscaledChannelOutputInfo>
+								<ResampledChannelOutputInfo Alias="cDAQ1Mod3/ai4_Resampled" CriticalAlarm="a1498bd40f1456dba1566531ce0c23c" DataType="[Type]Wfm(Double)" Disabled="[bool]False" Id="fa34526657ca4a5dbeea2d577508aed3" SampleRate="[double]100" Source="cDAQ1Mod3/ai4" Units="[string]V" WarningAlarm="336f0369c64f46f8a58338c2270e89ea">
+									<AlarmModel Id="a1498bd40f1456dba1566531ce0c23c" Severity="[AlarmSeverity]Critical" TriggerModel="1b500c604e48481bb01777ad386ee1b8" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]9b467760-9a11-432b-940c-52ed8fcb8f87" AliasToMonitor="[string]cDAQ1Mod3/ai4_Resampled" Id="1b500c604e48481bb01777ad386ee1b8">
+											<AboveValueTriggerModel Id="8f617e6fdaf849718f4b9525fad66229" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+									<AlarmModel Id="336f0369c64f46f8a58338c2270e89ea" Severity="[AlarmSeverity]Warning" TriggerModel="f5ce1d9c303496eaea4c00080877e99" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]7cf37c8f-e90d-4550-be38-848198a4ec67" AliasToMonitor="[string]cDAQ1Mod3/ai4_Resampled" Id="f5ce1d9c303496eaea4c00080877e99">
+											<AboveValueTriggerModel Id="5a230eeac1f44fc4ba4ecfb2bc1b8f29" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+								</ResampledChannelOutputInfo>
+							</InputChannelAdapter>
+							<InputChannelAdapter Id="c18cfd75f94444c89338f9eaefe2a859">
+								<AnalogInputChannel Alias="cDAQ1Mod3/ai5" CriticalAlarm="40b2bed75b5148e4bb8a8b11452e9f88" DataType="[Type]Wfm(Double)" Disabled="[bool]False" ExpectedMaximum="[double]10" ExpectedMinimum="[double]-10" Id="fd74d186efcb4b8691032028f75b18e1" LastTedsScanTimestamp="[DateTime]0001-01-01T06:00:00.0000000Z" PhysicalMeasurement="[PhysicalMeasurement]Voltage" SampleRate="[double]100" SensorClass="[SensorClass]Voltage" Source="cDAQ1Mod3/ai5" Units="[string]V" WarningAlarm="ff78b61800794985ae89a2d537345423">
+									<VoltageSensor Coupling="[Coupling]DC" ElectricalMaximum="[double]10" ElectricalMinimum="[double]-10" Id="aec236986cb946a09a87db96963d09ed" PhysicalMaximum="[double]10" PhysicalMinimum="[double]-10" ScaleType="[ScaleType]Linear">
+										<StandardUnitModel Id="ad8d01b2f2eb46b78cc979e54440ae50" Units="[Unit]Volts" />
+										<LinearScaleModel Id="ba13ce24c1d7497abcf5cdd4c6c331d5">
+											<SlopeScalePropertyModel Id="1235e69304854aed9bcb232619c383b3" SlopeUnit="[string]V/V" />
+											<ZeroedYInterceptPropertyModel Id="d4ae7e9a68e4ef99ce7eddbb8239b33" />
+										</LinearScaleModel>
+									</VoltageSensor>
+									<DAQmxVoltageInput ElectricalUnits="[Unit]Volts" Filter="[Filter]None" Id="4df53de8165246a0b2dd5ed0f9e82cf3" TerminalConfiguration="[TerminalConfiguration]Rse" />
+									<AlarmModel Id="ff78b61800794985ae89a2d537345423" Severity="[AlarmSeverity]Warning" TriggerModel="7796047f28ca459ebd8d1f1310698e6b" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]20a8126e-08cb-4b55-b7d6-98d706aa0f3d" AliasToMonitor="[string]cDAQ1Mod3/ai5" Id="7796047f28ca459ebd8d1f1310698e6b">
+											<AboveValueTriggerModel Id="5f29df9a7c3b4adda406bdab9b813d46" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+									<AlarmModel Id="40b2bed75b5148e4bb8a8b11452e9f88" Severity="[AlarmSeverity]Critical" TriggerModel="3c5d9d69029844ed95a4d8de7931f4ba" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]d1d4ab74-28ac-4168-b601-a79b46dcf363" AliasToMonitor="[string]cDAQ1Mod3/ai5" Id="3c5d9d69029844ed95a4d8de7931f4ba">
+											<AboveValueTriggerModel Id="c4a914daf9eb4b09aa2a7cbc0ded75a1" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+								</AnalogInputChannel>
+								<UnscaledChannelOutputInfo Alias="cDAQ1Mod3/ai5_Unscaled" CriticalAlarm="abe79a66fa704c6c8a6ee334310becce" DataType="[Type]Wfm(Double)" Disabled="[bool]False" Id="1ca04ec426194b538527369a6f93818f" IsTag="[bool]True" SampleRate="[double]100" Source="cDAQ1Mod3/ai5" Units="[string]V" WarningAlarm="eba34cb993764a51b778e4f83dedbf37">
+									<AlarmModel Id="abe79a66fa704c6c8a6ee334310becce" Severity="[AlarmSeverity]Critical" TriggerModel="fb32d80f19a44e88a367f5575b125ee0" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]0df0bbf9-c591-44a1-8dc7-714db526885e" AliasToMonitor="[string]cDAQ1Mod3/ai5_Unscaled" Id="fb32d80f19a44e88a367f5575b125ee0">
+											<AboveValueTriggerModel Id="c18168e73c7c4bb4b5585fbdc6502793" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+									<AlarmModel Id="eba34cb993764a51b778e4f83dedbf37" Severity="[AlarmSeverity]Warning" TriggerModel="d91f2ca0edb049a1839ffcd0f4029231" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]2c5f4aef-e4d6-4338-beb2-6c42bb0d29cb" AliasToMonitor="[string]cDAQ1Mod3/ai5_Unscaled" Id="d91f2ca0edb049a1839ffcd0f4029231">
+											<AboveValueTriggerModel Id="ad3ad96675b3469dadc11ff3bdd99a0d" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+								</UnscaledChannelOutputInfo>
+								<ResampledChannelOutputInfo Alias="cDAQ1Mod3/ai5_Resampled" CriticalAlarm="919ab0557e024d8c964d497461ffe592" DataType="[Type]Wfm(Double)" Disabled="[bool]False" Id="282179a8852c471dbd60d5cf76137f92" SampleRate="[double]100" Source="cDAQ1Mod3/ai5" Units="[string]V" WarningAlarm="9226727c79e4400b8c3f007c30768788">
+									<AlarmModel Id="919ab0557e024d8c964d497461ffe592" Severity="[AlarmSeverity]Critical" TriggerModel="85b5a297261d46329b1c40511d391be8" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]1039b15b-c4c3-4f3c-8e48-6d890cd1b9ae" AliasToMonitor="[string]cDAQ1Mod3/ai5_Resampled" Id="85b5a297261d46329b1c40511d391be8">
+											<AboveValueTriggerModel Id="9f75b3b97a824246b502be03fa36515a" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+									<AlarmModel Id="9226727c79e4400b8c3f007c30768788" Severity="[AlarmSeverity]Warning" TriggerModel="bfe9f94cc8eb45eda416e1250092c10c" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]f110f5ee-55b8-4a8c-976e-1c295f7d49f4" AliasToMonitor="[string]cDAQ1Mod3/ai5_Resampled" Id="bfe9f94cc8eb45eda416e1250092c10c">
+											<AboveValueTriggerModel Id="babaa4f0e94e44c08a9710ada7adedf2" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+								</ResampledChannelOutputInfo>
+							</InputChannelAdapter>
+							<InputChannelAdapter Id="9c104c2b2167443d980b8325a841c2fb">
+								<AnalogInputChannel Alias="cDAQ1Mod3/ai6" CriticalAlarm="c86917b98ce44f27b1953f72faef8f9e" DataType="[Type]Wfm(Double)" Disabled="[bool]False" ExpectedMaximum="[double]10" ExpectedMinimum="[double]-10" Id="a190ef29fd6d4c1cb22a5add299d78e7" LastTedsScanTimestamp="[DateTime]0001-01-01T06:00:00.0000000Z" PhysicalMeasurement="[PhysicalMeasurement]Voltage" SampleRate="[double]100" SensorClass="[SensorClass]Voltage" Source="cDAQ1Mod3/ai6" Units="[string]V" WarningAlarm="dcf4c30d986d432aa5fd020de438a3fc">
+									<VoltageSensor Coupling="[Coupling]DC" ElectricalMaximum="[double]10" ElectricalMinimum="[double]-10" Id="81ce4758c11d4f8784d0be651baab413" PhysicalMaximum="[double]10" PhysicalMinimum="[double]-10" ScaleType="[ScaleType]Linear">
+										<StandardUnitModel Id="9d90067ddbcc480d908f846fdb100ba6" Units="[Unit]Volts" />
+										<LinearScaleModel Id="c47c86434741430ca0602f1b3cd1679d">
+											<SlopeScalePropertyModel Id="a5bcd0ee27e04e54a80671bf1c8b2f21" SlopeUnit="[string]V/V" />
+											<ZeroedYInterceptPropertyModel Id="8767e24daf2249d9a3e038d2c6aab7b3" />
+										</LinearScaleModel>
+									</VoltageSensor>
+									<DAQmxVoltageInput ElectricalUnits="[Unit]Volts" Filter="[Filter]None" Id="7b236c006d4648deb0259f1927be6274" TerminalConfiguration="[TerminalConfiguration]Rse" />
+									<AlarmModel Id="dcf4c30d986d432aa5fd020de438a3fc" Severity="[AlarmSeverity]Warning" TriggerModel="6d8735b5a41044778628562809fc0dca" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]20a8126e-08cb-4b55-b7d6-98d706aa0f3d" AliasToMonitor="[string]cDAQ1Mod3/ai6" Id="6d8735b5a41044778628562809fc0dca">
+											<AboveValueTriggerModel Id="67256b3ff5d34ada8ee0d5ce404755bb" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+									<AlarmModel Id="c86917b98ce44f27b1953f72faef8f9e" Severity="[AlarmSeverity]Critical" TriggerModel="1040d07f7e63479dab3420ab179c8cfb" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]d1d4ab74-28ac-4168-b601-a79b46dcf363" AliasToMonitor="[string]cDAQ1Mod3/ai6" Id="1040d07f7e63479dab3420ab179c8cfb">
+											<AboveValueTriggerModel Id="aa9605b0c90e4f7e81e57492aded1669" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+								</AnalogInputChannel>
+								<UnscaledChannelOutputInfo Alias="cDAQ1Mod3/ai6_Unscaled" CriticalAlarm="6b1b7950165f4a509a9d2f0119f1aff9" DataType="[Type]Wfm(Double)" Disabled="[bool]False" Id="1c1bcbed0c724f4785eb3cdee8912ffe" IsTag="[bool]True" SampleRate="[double]100" Source="cDAQ1Mod3/ai6" Units="[string]V" WarningAlarm="1be8d9f5bdb24264a5f6428ae51dcf23">
+									<AlarmModel Id="6b1b7950165f4a509a9d2f0119f1aff9" Severity="[AlarmSeverity]Critical" TriggerModel="29c6e0ffa2964c7faeb192b73954478c" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]dfe7692d-5335-4cc0-947a-6cb0fb9bf9ec" AliasToMonitor="[string]cDAQ1Mod3/ai6_Unscaled" Id="29c6e0ffa2964c7faeb192b73954478c">
+											<AboveValueTriggerModel Id="ab32d348f4254555b5212a38c7ad26ee" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+									<AlarmModel Id="1be8d9f5bdb24264a5f6428ae51dcf23" Severity="[AlarmSeverity]Warning" TriggerModel="d2fc152861ab4ce1bac5003f86e20f77" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]c95ddb0b-8379-4c71-afff-e6a043e2ac68" AliasToMonitor="[string]cDAQ1Mod3/ai6_Unscaled" Id="d2fc152861ab4ce1bac5003f86e20f77">
+											<AboveValueTriggerModel Id="d7dc48cd83074e828d8e429c7b3edc11" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+								</UnscaledChannelOutputInfo>
+								<ResampledChannelOutputInfo Alias="cDAQ1Mod3/ai6_Resampled" CriticalAlarm="1c28ddb0083c4002a86d8302e939b6e4" DataType="[Type]Wfm(Double)" Disabled="[bool]False" Id="8c997eab3be04d34821c66c16e944650" SampleRate="[double]100" Source="cDAQ1Mod3/ai6" Units="[string]V" WarningAlarm="71fc0b8263a9404788b954efd16f1d68">
+									<AlarmModel Id="1c28ddb0083c4002a86d8302e939b6e4" Severity="[AlarmSeverity]Critical" TriggerModel="4d7e87b3d90848d29c278e158ff2bae4" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]8c08ff9a-a862-4041-ac92-1de28a9bd314" AliasToMonitor="[string]cDAQ1Mod3/ai6_Resampled" Id="4d7e87b3d90848d29c278e158ff2bae4">
+											<AboveValueTriggerModel Id="944bd54999914844b7161378d1e97dd8" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+									<AlarmModel Id="71fc0b8263a9404788b954efd16f1d68" Severity="[AlarmSeverity]Warning" TriggerModel="2ae239176cd3435fbd0faa2dee47b503" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]485522dc-d3c8-4a14-9fac-4c78cbdeb765" AliasToMonitor="[string]cDAQ1Mod3/ai6_Resampled" Id="2ae239176cd3435fbd0faa2dee47b503">
+											<AboveValueTriggerModel Id="327f42db22a9475eaa1af98578618e7c" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+								</ResampledChannelOutputInfo>
+							</InputChannelAdapter>
+							<InputChannelAdapter Id="b7011fdd671046b1b2c3eb820f995cf7">
+								<AnalogInputChannel Alias="cDAQ1Mod3/ai7" CriticalAlarm="5ddf6c1cbd684f10bd9f6caa8426a0e8" DataType="[Type]Wfm(Double)" Disabled="[bool]False" ExpectedMaximum="[double]10" ExpectedMinimum="[double]-10" Id="4b469dbf80cc45828f2c12786dcb3025" LastTedsScanTimestamp="[DateTime]0001-01-01T06:00:00.0000000Z" PhysicalMeasurement="[PhysicalMeasurement]Voltage" SampleRate="[double]100" SensorClass="[SensorClass]Voltage" Source="cDAQ1Mod3/ai7" Units="[string]V" WarningAlarm="ba9625d4668f4d7c825ce486f038c566">
+									<VoltageSensor Coupling="[Coupling]DC" ElectricalMaximum="[double]10" ElectricalMinimum="[double]-10" Id="b00c8722943c408795029fefb8198170" PhysicalMaximum="[double]10" PhysicalMinimum="[double]-10" ScaleType="[ScaleType]Linear">
+										<StandardUnitModel Id="dffee7a0df1341fa8c37554aa50e8356" Units="[Unit]Volts" />
+										<LinearScaleModel Id="b9e676569ca946e6930afdcde472205b">
+											<SlopeScalePropertyModel Id="787066dfe4a14f31b5e66fe551f4d388" SlopeUnit="[string]V/V" />
+											<ZeroedYInterceptPropertyModel Id="74e7ab93a8e4151adc67ea1a7968e3f" />
+										</LinearScaleModel>
+									</VoltageSensor>
+									<DAQmxVoltageInput ElectricalUnits="[Unit]Volts" Filter="[Filter]None" Id="4418407acba743f6a0eb143e752d1096" TerminalConfiguration="[TerminalConfiguration]Rse" />
+									<AlarmModel Id="ba9625d4668f4d7c825ce486f038c566" Severity="[AlarmSeverity]Warning" TriggerModel="1b13adf627d5497082a05eec72678103" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]20a8126e-08cb-4b55-b7d6-98d706aa0f3d" AliasToMonitor="[string]cDAQ1Mod3/ai7" Id="1b13adf627d5497082a05eec72678103">
+											<AboveValueTriggerModel Id="a902c5dbe0094b84b180b212aeca8ec1" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+									<AlarmModel Id="5ddf6c1cbd684f10bd9f6caa8426a0e8" Severity="[AlarmSeverity]Critical" TriggerModel="7af32db928794c56aac1cf563b83e6d3" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]d1d4ab74-28ac-4168-b601-a79b46dcf363" AliasToMonitor="[string]cDAQ1Mod3/ai7" Id="7af32db928794c56aac1cf563b83e6d3">
+											<AboveValueTriggerModel Id="7b6ed55be1a2483c93eaea880d9d4f42" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+								</AnalogInputChannel>
+								<UnscaledChannelOutputInfo Alias="cDAQ1Mod3/ai7_Unscaled" CriticalAlarm="572daccd2c31410ba293241f5826d0c6" DataType="[Type]Wfm(Double)" Disabled="[bool]False" Id="9c53e2e461b84a95a5b0e97c1e044d28" IsTag="[bool]True" SampleRate="[double]100" Source="cDAQ1Mod3/ai7" Units="[string]V" WarningAlarm="d0289463efd44922ae498c2cb78ea656">
+									<AlarmModel Id="572daccd2c31410ba293241f5826d0c6" Severity="[AlarmSeverity]Critical" TriggerModel="19d53ccefc11403b8f5c7f5a33be1750" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]2897b6b0-7cd8-4ed3-b155-f659ac34ad91" AliasToMonitor="[string]cDAQ1Mod3/ai7_Unscaled" Id="19d53ccefc11403b8f5c7f5a33be1750">
+											<AboveValueTriggerModel Id="92c0698b6df94bcca34bbd83fb613d79" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+									<AlarmModel Id="d0289463efd44922ae498c2cb78ea656" Severity="[AlarmSeverity]Warning" TriggerModel="1c7865a27d83488894f74c5a385f0755" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]4374cd76-00d4-42fb-b5d0-e77647b03ef5" AliasToMonitor="[string]cDAQ1Mod3/ai7_Unscaled" Id="1c7865a27d83488894f74c5a385f0755">
+											<AboveValueTriggerModel Id="bf84727d235a4a48a8ab22f9a945ba04" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+								</UnscaledChannelOutputInfo>
+								<ResampledChannelOutputInfo Alias="cDAQ1Mod3/ai7_Resampled" CriticalAlarm="b1834ef7cba843ea8fe2b0f51a365f51" DataType="[Type]Wfm(Double)" Disabled="[bool]False" Id="b12c296279f7406b8b80c9cb07152577" SampleRate="[double]100" Source="cDAQ1Mod3/ai7" Units="[string]V" WarningAlarm="1e4dbfcb27d04179a7cf5b5b5e724401">
+									<AlarmModel Id="b1834ef7cba843ea8fe2b0f51a365f51" Severity="[AlarmSeverity]Critical" TriggerModel="cf8c01ff0589469390b8cb7fd3512b23" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]5afab0b9-b622-4f4f-a2d1-77c1367eed3f" AliasToMonitor="[string]cDAQ1Mod3/ai7_Resampled" Id="cf8c01ff0589469390b8cb7fd3512b23">
+											<AboveValueTriggerModel Id="223d13caf0944f14b4cbd9d8714acd3b" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+									<AlarmModel Id="1e4dbfcb27d04179a7cf5b5b5e724401" Severity="[AlarmSeverity]Warning" TriggerModel="dd428c5b835d4b5cb391a0c9db51d38c" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]4a0963bf-d6d2-4d8c-9d4a-a18fe0482e3a" AliasToMonitor="[string]cDAQ1Mod3/ai7_Resampled" Id="dd428c5b835d4b5cb391a0c9db51d38c">
+											<AboveValueTriggerModel Id="3b994207013048c889aa8721fbd2369e" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+								</ResampledChannelOutputInfo>
+							</InputChannelAdapter>
+						</UnidirectionalDAQmxModuleModel>
+						<UnidirectionalDAQmxModuleModel Chassis="[string]cDAQ1" ChassisSerialNumber="[string]" DeviceLabel="[string]CSeriesUserInterfaceModule" DeviceName="[string]cDAQ1Mod2" DeviceType="[DeviceType]CompactDaq" IconPath="[string]pack://application:,,,/NationalInstruments.DAQmx.SystemDesigner.Plugin;component/NineGridImages/PartsView_DigitalIO_24x24.xml" Id="87bb7f1cc0a641ccbe058e51bc1f8fb0" IsSimulated="[bool]True" ProductIdentifier="[ulong]30694" ProductName="[string]NI 9344" SampleRateLevel="[SampleRateLevel]Digital" SerialNumber="[string]" Slot="[ulong]2" SmallIconPath="[string]pack://application:,,,/NationalInstruments.DAQmx.SystemDesigner.Plugin;component/NineGridImages/TableView_DigitalIO_16x16.xml" StyleProviderId="[string]CdaqModuleDisplayStrategyProvider">
+							<InputChannelAdapter Id="2a9beb1d0f3b42a3bb59c3faaa6fa5c2">
+								<DigitalInputChannel Alias="cDAQ1Mod2/port0/line0" CriticalAlarm="6041df1f7f3340e7971710925f0b3c2c" DataType="[Type]Boolean[]" ExpectedMaximum="[double]1.1" ExpectedMinimum="[double]-0.1" Id="5e32904488534a6597c663016bf8252f" PhysicalMeasurement="[PhysicalMeasurement]Digital" SampleRate="[double]10" SensorClass="[SensorClass]DigitalLine" Source="cDAQ1Mod2/port0/line0" Units="[string]Level" WarningAlarm="1f632ad175bd46de9ca68bdfbdc0b5a9">
+									<DAQmxDigitalInput Id="f198303e615d4780bfea5c6e1ef5ce19" />
+									<DigitalSensor Id="f783dd1921a24075b5a967115386acac" />
+									<AlarmModel Id="6041df1f7f3340e7971710925f0b3c2c" Severity="[AlarmSeverity]Critical" TriggerModel="2256f997d99746b0bef98e10bbe9cf2a" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]d3690d48-226c-42c5-a42e-9470f1ad2e0a" AliasToMonitor="[string]cDAQ1Mod2/port0/line0" Id="2256f997d99746b0bef98e10bbe9cf2a">
+											<DigitalLevelLowTriggerModel Id="b7bea654d5df471d9b86168ed617bbac" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+									<AlarmModel Id="1f632ad175bd46de9ca68bdfbdc0b5a9" Severity="[AlarmSeverity]Warning" TriggerModel="ef5997d7e93946afbe18bd03cceea82c" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]ec1e8332-883e-49da-8502-a1b65001bde0" AliasToMonitor="[string]cDAQ1Mod2/port0/line0" Id="ef5997d7e93946afbe18bd03cceea82c">
+											<DigitalLevelLowTriggerModel Id="db81d40a48144331adf45d9fa831b35c" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+								</DigitalInputChannel>
+							</InputChannelAdapter>
+							<InputChannelAdapter Id="b18beb1c86ac433b94c57c8d183fab0b">
+								<DigitalInputChannel Alias="cDAQ1Mod2/port0/line1" CriticalAlarm="c07ed8b50d844615b4eb1682490f022e" DataType="[Type]Boolean[]" Disabled="[bool]False" ExpectedMaximum="[double]1.1" ExpectedMinimum="[double]-0.1" Id="50b6634f1250450595587db3bb049486" PhysicalMeasurement="[PhysicalMeasurement]Digital" SampleRate="[double]10" SensorClass="[SensorClass]DigitalLine" Source="cDAQ1Mod2/port0/line1" Units="[string]Level" WarningAlarm="886b338cd20347d4bb7fcc9c23173267">
+									<DigitalSensor Id="7f4ae8e2ac674a75b4acddad2294d31f" />
+									<DAQmxDigitalInput Id="b171a3f35ef7446a949fbb7d6ead1df9" />
+									<AlarmModel Id="886b338cd20347d4bb7fcc9c23173267" Severity="[AlarmSeverity]Warning" TriggerModel="49f5514815b14f01a9a6df2a0939e1cc" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]ec1e8332-883e-49da-8502-a1b65001bde0" AliasToMonitor="[string]cDAQ1Mod2/port0/line1" Id="49f5514815b14f01a9a6df2a0939e1cc">
+											<DigitalLevelLowTriggerModel Id="54d88230a2294a75909c714412222aa8" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+									<AlarmModel Id="c07ed8b50d844615b4eb1682490f022e" Severity="[AlarmSeverity]Critical" TriggerModel="7e82053768d94ffba65e396ebd938b57" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]d3690d48-226c-42c5-a42e-9470f1ad2e0a" AliasToMonitor="[string]cDAQ1Mod2/port0/line1" Id="7e82053768d94ffba65e396ebd938b57">
+											<DigitalLevelLowTriggerModel Id="80d0ed60bc2741549fd2550f1b1640ab" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+								</DigitalInputChannel>
+							</InputChannelAdapter>
+							<InputChannelAdapter Id="243fc9ded92b484aa00161e0c54cfc64">
+								<DigitalInputChannel Alias="cDAQ1Mod2/port0/line2" CriticalAlarm="427f2a24988d48e598c0ad724b8cc8aa" DataType="[Type]Boolean[]" Disabled="[bool]False" ExpectedMaximum="[double]1.1" ExpectedMinimum="[double]-0.1" Id="3d3398d2979e49b19a31f8bd6a24dee8" PhysicalMeasurement="[PhysicalMeasurement]Digital" SampleRate="[double]10" SensorClass="[SensorClass]DigitalLine" Source="cDAQ1Mod2/port0/line2" Units="[string]Level" WarningAlarm="8362f1469ba444818570d74d76169e8f">
+									<DigitalSensor Id="6cb20b0ae0974d6f8498c24176ac8dd5" />
+									<DAQmxDigitalInput Id="d2ab1b6bd41b46f0b0d4d577e98abb79" />
+									<AlarmModel Id="8362f1469ba444818570d74d76169e8f" Severity="[AlarmSeverity]Warning" TriggerModel="63421d4c59342e094781154e1344f7a" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]ec1e8332-883e-49da-8502-a1b65001bde0" AliasToMonitor="[string]cDAQ1Mod2/port0/line2" Id="63421d4c59342e094781154e1344f7a">
+											<DigitalLevelLowTriggerModel Id="287f4551c3dd43529f99b7c0b8d030b7" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+									<AlarmModel Id="427f2a24988d48e598c0ad724b8cc8aa" Severity="[AlarmSeverity]Critical" TriggerModel="2503ba16e13642888387044c6612b1c1" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]d3690d48-226c-42c5-a42e-9470f1ad2e0a" AliasToMonitor="[string]cDAQ1Mod2/port0/line2" Id="2503ba16e13642888387044c6612b1c1">
+											<DigitalLevelLowTriggerModel Id="2e0e95470df848b293e03c4bfbee1e67" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+								</DigitalInputChannel>
+							</InputChannelAdapter>
+							<InputChannelAdapter Id="94808e2c779a4f33a6276f3961da2502">
+								<DigitalInputChannel Alias="cDAQ1Mod2/port0/line3" CriticalAlarm="c66d0626d9844aafbed779abff4fb178" DataType="[Type]Boolean[]" Disabled="[bool]False" ExpectedMaximum="[double]1.1" ExpectedMinimum="[double]-0.1" Id="7b381df219a423a82885d31cfcf6fea" PhysicalMeasurement="[PhysicalMeasurement]Digital" SampleRate="[double]10" SensorClass="[SensorClass]DigitalLine" Source="cDAQ1Mod2/port0/line3" Units="[string]Level" WarningAlarm="2efbb1a1140e475a8f0b5585b7d4d1d9">
+									<DigitalSensor Id="e826770872994a81864e39dcd24132e2" />
+									<DAQmxDigitalInput Id="29f944287ffe47e4af3396549cda66b1" />
+									<AlarmModel Id="2efbb1a1140e475a8f0b5585b7d4d1d9" Severity="[AlarmSeverity]Warning" TriggerModel="5519576ba28241d7a0a90d723f2ec860" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]ec1e8332-883e-49da-8502-a1b65001bde0" AliasToMonitor="[string]cDAQ1Mod2/port0/line3" Id="5519576ba28241d7a0a90d723f2ec860">
+											<DigitalLevelLowTriggerModel Id="fec1ce1b77154fa4943d001e2bb0ff63" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+									<AlarmModel Id="c66d0626d9844aafbed779abff4fb178" Severity="[AlarmSeverity]Critical" TriggerModel="db40b61e36064acb8d9e58cf9d1d0ae0" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]d3690d48-226c-42c5-a42e-9470f1ad2e0a" AliasToMonitor="[string]cDAQ1Mod2/port0/line3" Id="db40b61e36064acb8d9e58cf9d1d0ae0">
+											<DigitalLevelLowTriggerModel Id="5e529913808842078b3eaa01d76bde0b" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+								</DigitalInputChannel>
+							</InputChannelAdapter>
+							<OutputChannelAdapter Id="c247675900064453aeec50fd76ad6afb">
+								<DigitalOutputChannel Alias="cDAQ1Mod2/port1/line0" ExpectedMaximum="[double]1" ExpectedMinimum="[double]0" Id="4b68cf0f91104ee1863837aff1545326" MappingAlias="[string]2330522d-5692-4ba4-b1f6-30d0153e7280" PhysicalGeneration="[PhysicalGeneration]DigitalLine" ResetValue="[double]0" Source="cDAQ1Mod2/port1/line0" Units="[string]Level">
+									<SupportedDataType SupportedType="Boolean" xmlns="http://www.ni.com/Lumberjack.Core" />
+									<DAQmxDigitalLineOutput Id="ff61a7ffc9f64f1bb9c6472693e46d55" />
+								</DigitalOutputChannel>
+								<OutputChannelOutputInfo Alias="cDAQ1Mod2/port1/line0_Written" CriticalAlarm="335d99c617f34a9ea38740acec48db54" DataType="[Type]Wfm(Double)" Id="6f7a24cf1423414eafd3f29dc014fd79" SampleRate="[double]0" Source="cDAQ1Mod2/port1/line0" Units="[string]" WarningAlarm="6b03519b60b641f2bc072db878e40964">
+									<AlarmModel Id="335d99c617f34a9ea38740acec48db54" Severity="[AlarmSeverity]Critical" TriggerModel="cdf1822f405341758995e8237877856d" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]1e60efc4-79dd-4d6b-9851-4f57e6034f08" AliasToMonitor="[string]cDAQ1Mod2/port1/line0_Written" Id="cdf1822f405341758995e8237877856d">
+											<AboveValueTriggerModel Id="865f2f867c8d4ab5a257eb904b7a205f" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+									<AlarmModel Id="6b03519b60b641f2bc072db878e40964" Severity="[AlarmSeverity]Warning" TriggerModel="35fcfd2f8a784914b5716c0a4cf07d53" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]77e70792-ca6b-44e3-b927-8a2340077ce6" AliasToMonitor="[string]cDAQ1Mod2/port1/line0_Written" Id="35fcfd2f8a784914b5716c0a4cf07d53">
+											<AboveValueTriggerModel Id="ea5c88e44af54ea9ba8fa08eb02d0daa" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+								</OutputChannelOutputInfo>
+							</OutputChannelAdapter>
+							<OutputChannelAdapter Id="ebcbedf647d04ad6a7f0c752efef907d">
+								<DigitalOutputChannel Alias="cDAQ1Mod2/port1/line1" Disabled="[bool]False" ExpectedMaximum="[double]1" ExpectedMinimum="[double]0" Id="2fdae2f468c14f52bf50e9e116fb2daa" MappingAlias="[string]3ff9e750-d7bc-42c0-b2d3-5fa3f0317c8c" PhysicalGeneration="[PhysicalGeneration]DigitalLine" ResetValue="[double]0" ResetValueEnabled="[bool]False" Source="cDAQ1Mod2/port1/line1" Units="[string]Level">
+									<SupportedDataType SupportedType="Boolean" xmlns="http://www.ni.com/Lumberjack.Core" />
+									<DAQmxDigitalLineOutput Id="82f69139438b473697c4b2dc42d22d46" />
+								</DigitalOutputChannel>
+								<OutputChannelOutputInfo Alias="cDAQ1Mod2/port1/line1_Written" CriticalAlarm="a56fb3c30ac44f979589777e3ddd6087" DataType="[Type]Wfm(Double)" Disabled="[bool]False" Id="b7b0ba71cec84435a2d0fc6e58b1346c" SampleRate="[double]0" Source="cDAQ1Mod2/port1/line1" Units="[string]" WarningAlarm="8e6a1dfdbda34b7989f7c980cfa860a8">
+									<AlarmModel Id="a56fb3c30ac44f979589777e3ddd6087" Severity="[AlarmSeverity]Critical" TriggerModel="82431eeaa6574b559292008d8abb75ec" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]d754fa54-a307-4370-bb5b-34f2215be09d" AliasToMonitor="[string]cDAQ1Mod2/port1/line1_Written" Id="82431eeaa6574b559292008d8abb75ec">
+											<AboveValueTriggerModel Id="56515c852b364f1a9a0f9b598699ce83" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+									<AlarmModel Id="8e6a1dfdbda34b7989f7c980cfa860a8" Severity="[AlarmSeverity]Warning" TriggerModel="5353e95277e042a58a8bc3ea51e0d181" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]d69fb938-9235-4fec-9ab2-4e3fa0513509" AliasToMonitor="[string]cDAQ1Mod2/port1/line1_Written" Id="5353e95277e042a58a8bc3ea51e0d181">
+											<AboveValueTriggerModel Id="f29357cca1d4465496da5336e69f6bee" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+								</OutputChannelOutputInfo>
+							</OutputChannelAdapter>
+							<OutputChannelAdapter Id="bc9438ea815b4446ae333b920ca582e3">
+								<DigitalOutputChannel Alias="cDAQ1Mod2/port1/line2" Disabled="[bool]False" ExpectedMaximum="[double]1" ExpectedMinimum="[double]0" Id="577a52f93d5240a29737ca214501a561" MappingAlias="[string]56e3a68d-5a99-488d-8860-1c2d08476689" PhysicalGeneration="[PhysicalGeneration]DigitalLine" ResetValue="[double]0" ResetValueEnabled="[bool]False" Source="cDAQ1Mod2/port1/line2" Units="[string]Level">
+									<SupportedDataType SupportedType="Boolean" xmlns="http://www.ni.com/Lumberjack.Core" />
+									<DAQmxDigitalLineOutput Id="55a123f3f47e4e4695b5f965d9364d01" />
+								</DigitalOutputChannel>
+								<OutputChannelOutputInfo Alias="cDAQ1Mod2/port1/line2_Written" CriticalAlarm="85b816d77e1b4cd382c898640b8d60b3" DataType="[Type]Wfm(Double)" Disabled="[bool]False" Id="740ebc6a1be44ad9f4cb095c0444728" SampleRate="[double]0" Source="cDAQ1Mod2/port1/line2" Units="[string]" WarningAlarm="7d86cb0e49db42f18bd7e8d40fc9efec">
+									<AlarmModel Id="85b816d77e1b4cd382c898640b8d60b3" Severity="[AlarmSeverity]Critical" TriggerModel="b6420aefc649470fa77bea784cb859a7" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]85d001e2-1081-4abf-8b92-fd48c120b19c" AliasToMonitor="[string]cDAQ1Mod2/port1/line2_Written" Id="b6420aefc649470fa77bea784cb859a7">
+											<AboveValueTriggerModel Id="ef82f2cc95744ab89d24a9cff6187de6" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+									<AlarmModel Id="7d86cb0e49db42f18bd7e8d40fc9efec" Severity="[AlarmSeverity]Warning" TriggerModel="5aff0186a2fc4c39a36ea9314ee67b01" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]1380cc98-a84a-40e1-aedc-24090a6f5569" AliasToMonitor="[string]cDAQ1Mod2/port1/line2_Written" Id="5aff0186a2fc4c39a36ea9314ee67b01">
+											<AboveValueTriggerModel Id="8871a31133334c52b3b0f59ce196854d" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+								</OutputChannelOutputInfo>
+							</OutputChannelAdapter>
+							<OutputChannelAdapter Id="8c867f2de21943eab294b4ebbd2308f4">
+								<DigitalOutputChannel Alias="cDAQ1Mod2/port1/line3" Disabled="[bool]False" ExpectedMaximum="[double]1" ExpectedMinimum="[double]0" Id="218cdf2d4d1d48c982fb3d8dde8839a4" MappingAlias="[string]ce1018d0-5e9d-4907-8e1f-c4d37dd52282" PhysicalGeneration="[PhysicalGeneration]DigitalLine" ResetValue="[double]0" ResetValueEnabled="[bool]False" Source="cDAQ1Mod2/port1/line3" Units="[string]Level">
+									<SupportedDataType SupportedType="Boolean" xmlns="http://www.ni.com/Lumberjack.Core" />
+									<DAQmxDigitalLineOutput Id="c8eaf62352b74d91b7382bca312a6db2" />
+								</DigitalOutputChannel>
+								<OutputChannelOutputInfo Alias="cDAQ1Mod2/port1/line3_Written" CriticalAlarm="ecb5dbd01fd8465192775b1104066841" DataType="[Type]Wfm(Double)" Disabled="[bool]False" Id="e96a06152ae14b96872ffb4eccb3efd7" SampleRate="[double]0" Source="cDAQ1Mod2/port1/line3" Units="[string]" WarningAlarm="b666e8b561f246dfbaff3f385ece2bdc">
+									<AlarmModel Id="ecb5dbd01fd8465192775b1104066841" Severity="[AlarmSeverity]Critical" TriggerModel="c81d3396c36b48da82a1c561107fc46e" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]318a3755-f424-45f8-8f86-3e351bfbe2b8" AliasToMonitor="[string]cDAQ1Mod2/port1/line3_Written" Id="c81d3396c36b48da82a1c561107fc46e">
+											<AboveValueTriggerModel Id="80891a76e7584bbb852fb519fa14dced" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+									<AlarmModel Id="b666e8b561f246dfbaff3f385ece2bdc" Severity="[AlarmSeverity]Warning" TriggerModel="6191e0ab51e64dc7b36ccf6aa1c623cb" xmlns="http://www.ni.com/Lumberjack.Core">
+										<ChannelMonitorTriggerModel Alias="[string]42e6928c-74cf-4654-9606-e128a0042ad0" AliasToMonitor="[string]cDAQ1Mod2/port1/line3_Written" Id="6191e0ab51e64dc7b36ccf6aa1c623cb">
+											<AboveValueTriggerModel Id="ec37a6881cfe4f3080e21e739e78a0ad" />
+										</ChannelMonitorTriggerModel>
+									</AlarmModel>
+								</OutputChannelOutputInfo>
+							</OutputChannelAdapter>
+						</UnidirectionalDAQmxModuleModel>
+						<ChassisTimingOwner Id="d45d6ad0d3184d73a938b97fb3096dbc">
+							<ChassisSampleTimingModel Id="c077e9f54b454c0f8f72fce8fff49fb6" Level="[SampleRateLevel]Slow" Units="[Unit]Hertz" Value="[double]1" />
+							<ChassisSampleTimingModel Id="99a446fece6246e1a2a1a7c1c8085b89" Level="[SampleRateLevel]Medium" RequestedSampleClockTimebaseRate="[double]NaN" Units="[Unit]Hertz" Value="[double]100" />
+							<ChassisSampleTimingModel Id="539d8a1bfe7a4c78888da92d6bb9e5f7" Level="[SampleRateLevel]Fast" Units="[Unit]Hertz" Value="[double]1000" />
+							<ChassisSampleTimingModel Id="8cac41b8a7d94e02ad8b1abec6b205b2" Level="[SampleRateLevel]Counter" Units="[Unit]Hertz" Value="[double]100" />
+							<ChassisSampleTimingModel Id="a81c4a0e27bb4781b2260f4936fdedcf" Level="[SampleRateLevel]Digital" Units="[Unit]Hertz" Value="[double]10" />
+							<ChassisOnDemandTimingModel Id="9f3ca47aa6e14c55b9b00d79fe3e526b" Level="[SampleRateLevel]OnDemand" />
+						</ChassisTimingOwner>
+					</DAQmxChassisModelProxy>
+					<TopLevelTimingOwner FallbackMediumSampleRateLevel="[SampleRateLevel]Fast" Id="f57845d640cf4956be2301bbedc5b12f">
+						<SampleTiming Id="47beab430f3646c58fbff90a096dcbea" Level="[SampleRateLevel]Slow" Units="[Unit]Hertz" Value="[double]1" />
+						<SampleTiming Id="9a82554419754b408f11eb50b9c1074b" Level="[SampleRateLevel]Medium" Units="[Unit]Hertz" Value="[double]100" />
+						<SampleTiming Id="25435ade7fa64943bc841678ca460001" Level="[SampleRateLevel]Fast" Units="[Unit]Hertz" Value="[double]1000" />
+						<SampleTiming Id="4da71e79e4cc41ed9d8742956e7f1eec" Level="[SampleRateLevel]Counter" Units="[Unit]Hertz" Value="[double]100" />
+						<SampleTiming Id="accea4dcb75c4463abe2ac2065356201" Level="[SampleRateLevel]Digital" Units="[Unit]Hertz" Value="[double]10" />
+						<OnDemandTiming Id="3e2575967df5451c816498de9ee1a921" Level="[SampleRateLevel]OnDemand" />
+					</TopLevelTimingOwner>
+				</DAQmxProcessingElement>
+				<ExternalTagProducerSubsystem Id="f163ddef29174935ad1a0d256b0d527b" />
+				<ExternalTagConsumerSubsystem Id="dc52d4e4b0f645a4b671a7d31faa4b60" />
+			</ProcessingElementModelOwner>
+		</ChannelConfigurationModel>
+		<ChassisModelOwner Id="bb4d76fba31f49f284499294fa360523">
+			<ChassisModel DeviceLabel="[string]CompactDAQChassis" DeviceName="[string]cDAQ1" DeviceType="[DeviceType]CompactDaq" Hostname="[string]" IconPath="[string]pack://application:,,,/NationalInstruments.DAQmx.SystemDesigner.Plugin;component/NineGridImages/PartsView_CompactDAQEthernetChassis_40x40.xml" Id="3c35df8d897149ab9d02c97984810706" IpAddresses="[IEnumerable:string]0.0.0.0" IsSimulated="[bool]True" NumberOfSlots="[ulong]8" ProductIdentifier="[ulong]29843" ProductName="[string]NI cDAQ-9188" SerialNumber="[string]" SmallIconPath="[string]pack://application:,,,/NationalInstruments.DAQmx.SystemDesigner.Plugin;component/NineGridImages/TableView_CompactDAQEthernetChassis_16x16.xml" StyleProviderId="[string]NetworkCdaqChassisDisplayStrategy" SupportsSyncDomain="[bool]False" />
+		</ChassisModelOwner>
+	</ChannelSpecification>
+</SourceFile>

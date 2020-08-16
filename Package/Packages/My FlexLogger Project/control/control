@@ -1,0 +1,13 @@
+Architecture: windows_x64
+Built-Using: nipkg
+Depends: ni-flexlogger (>=20.2.0.49152-0+f0), ni-daqmx-runtime-core (>=20.0.0.49152-0+f0)
+Description: Logs stuff
+Maintainer: MyCompany <email@mycompany.com>
+Package: myflexlogger-project
+Section: Application Software
+Version: 1.0.0.4
+XB-DisplayName: My FlexLogger Project
+XB-Plugin: file
+XB-StoreProduct: yes
+XB-UserVisible: yes
+XB-VisibleForRuntimeDeployment: no

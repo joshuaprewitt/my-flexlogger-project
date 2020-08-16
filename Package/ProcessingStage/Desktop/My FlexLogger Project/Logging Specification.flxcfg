@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SourceFile Checksum="BD29849C514FA9A104326E0EA6460B63CAF577892EE4B6C3CA81F0D64769BEFD813455ABFA2BCD8A3DDD971CFD40F614DEC980549AD1E18B8239E59D3D230E49" Timestamp="1D650B309CB9690" xmlns="http://www.ni.com/PlatformFramework">
+	<SourceModelFeatureSet>
+		<ParsableNamespace AssemblyFileVersion="8.2.0.50169" FeatureSetName="Lumberjack Core" Name="http://www.ni.com/Lumberjack.Core" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="8.2.0.50169" FeatureSetName="Editor" Name="http://www.ni.com/PlatformFramework" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ApplicationVersionInfo Build="8.2.0.50169" Name="FlexLogger" Version="20.2.0.0" />
+	</SourceModelFeatureSet>
+	<LoggingSpecification xmlns="http://www.ni.com/Lumberjack.Core">
+		<LoggingConfigurationModel Id="857e7dfeb8304864a80237c8c21a2ebe">
+			<ProcessingElementModelOwner Id="b8451abe03ae478698e654fad6ff0c86">
+				<TriggeredLoggingProvider Id="8a2cf87f28b541db87aa5de1962fe64c" ModelTypeId="[string]CBA104E4-2D21-4AC7-915B-D7DCC1243DCE" StartTime="2020-07-02T15:41:45.4027997999999999999992152110994680924704880453646183013916015625-05:00" />
+				<TdmsLoggingProvider DataReductionStrategy="Decimate" Id="e48544e686d94b8e8af5f8ba2d92eda3" IsSegmentingEnabled="True" LogFileBasePath="&quot;C:\\Users\\jprewitt\\Documents\\FlexLogger\\data&quot;" ModelTypeId="[string]59163356-411F-436B-A6B6-82FB1EFB19E1" SegmentFileSize="10485760">
+					<UserDefinedMetadata Id="b8fe0105a3d042e5bd2c16d2d97440e0">
+						<UserDefinedMetadataItem DataType="String" Id="571686b5084f426997ae0a3aa5512208" Name="Operator">
+							<p.Value>jprewitt</p.Value>
+						</UserDefinedMetadataItem>
+						<UserDefinedMetadataItem DataType="String" Id="3a2fdf56ef0746178bc7e72b75901d5b" Name="DUT">
+							<p.Value>12345</p.Value>
+						</UserDefinedMetadataItem>
+					</UserDefinedMetadata>
+				</TdmsLoggingProvider>
+			</ProcessingElementModelOwner>
+		</LoggingConfigurationModel>
+	</LoggingSpecification>
+</SourceFile>

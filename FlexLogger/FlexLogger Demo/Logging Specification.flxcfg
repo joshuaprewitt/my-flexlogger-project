@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SourceFile Checksum="C492AD8384D7C7335B022B60344F553817AF6EA8192E477FA2C083784EF55C4479D53DD837958EEEF4030CEF8F88FFC419ADCFBCFE478F274AB69E538B2C90A0" Timestamp="1D67423BD202D47" xmlns="http://www.ni.com/PlatformFramework">
+	<SourceModelFeatureSet>
+		<ParsableNamespace AssemblyFileVersion="8.2.0.50169" FeatureSetName="Lumberjack Core" Name="http://www.ni.com/Lumberjack.Core" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="8.2.0.50169" FeatureSetName="Editor" Name="http://www.ni.com/PlatformFramework" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ApplicationVersionInfo Build="8.2.0.50169" Name="FlexLogger" Version="20.2.0.0" />
+	</SourceModelFeatureSet>
+	<LoggingSpecification xmlns="http://www.ni.com/Lumberjack.Core">
+		<LoggingConfigurationModel Id="e44b5b8169649e88c2ef21a91660ea1">
+			<ProcessingElementModelOwner Id="e1ab5530969743fc82cb76977eae9da3">
+				<TriggeredLoggingProvider Id="f0f8f45fe3c3472fa507fff85a1db3f8" ModelTypeId="[string]CBA104E4-2D21-4AC7-915B-D7DCC1243DCE" StartTime="2020-08-16T18:13:38.06870799999999999997657429418040919699706137180328369140625-05:00" />
+				<TdmsLoggingProvider DataReductionStrategy="Decimate" Id="8f35613aceef43aeb68da254d52fc727" LogFileBasePath="&quot;C:\\Users\\jprewitt\\Documents\\FlexLogger\\data&quot;" ModelTypeId="[string]59163356-411F-436B-A6B6-82FB1EFB19E1">
+					<UserDefinedMetadata Id="6a336c1a2fbf4f5e8ee11f198f15cd24">
+						<UserDefinedMetadataItem DataType="String" Id="73c6c230f7c248879a6458df5490585c" Name="Operator">
+							<p.Value>jprewitt</p.Value>
+						</UserDefinedMetadataItem>
+						<UserDefinedMetadataItem DataType="String" Id="26a4ec65fd984a078c7a2a1953ad1ced" Name="DUT">
+							<p.Value>642234</p.Value>
+						</UserDefinedMetadataItem>
+					</UserDefinedMetadata>
+				</TdmsLoggingProvider>
+			</ProcessingElementModelOwner>
+		</LoggingConfigurationModel>
+	</LoggingSpecification>
+</SourceFile>
