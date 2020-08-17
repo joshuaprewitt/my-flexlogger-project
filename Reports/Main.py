@@ -72,7 +72,6 @@ def On_Run_AnalysisProcedure(oContext):
     dd.Report.Sheets.ExportToPDF(pdfExportPath,False)
     
     oContext.FileService.UploadResultFile(pdfExportPath, "", "Documents", False)
-
     oContext.LogResult("On_Run_AnalysisProcedure: End of Analysis procedure")
 
 # end of On_Run_AnalysisProcedure() -------------------
